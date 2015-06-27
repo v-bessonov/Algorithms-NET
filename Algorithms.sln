@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.Core", "Algorithms.Core\Algorithms.Core.csproj", "{67159FEC-6D05-4847-A0E3-1CC0AFA603E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{290AFCCC-4EC3-443D-9766-D524F5AF3F50}"
+	ProjectSection(SolutionItems) = preProject
+		Algorithms.vsmdi = Algorithms.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithms.ConsoleApp", "Algorithms.ConsoleApp\Algorithms.ConsoleApp.csproj", "{AA5A450E-14D6-4A53-B69B-F5CB7198CA03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67159FEC-6D05-4847-A0E3-1CC0AFA603E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67159FEC-6D05-4847-A0E3-1CC0AFA603E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67159FEC-6D05-4847-A0E3-1CC0AFA603E6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{67159FEC-6D05-4847-A0E3-1CC0AFA603E6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{67159FEC-6D05-4847-A0E3-1CC0AFA603E6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{67159FEC-6D05-4847-A0E3-1CC0AFA603E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67159FEC-6D05-4847-A0E3-1CC0AFA603E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67159FEC-6D05-4847-A0E3-1CC0AFA603E6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{67159FEC-6D05-4847-A0E3-1CC0AFA603E6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{67159FEC-6D05-4847-A0E3-1CC0AFA603E6}.Release|x86.ActiveCfg = Release|Any CPU
+		{AA5A450E-14D6-4A53-B69B-F5CB7198CA03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA5A450E-14D6-4A53-B69B-F5CB7198CA03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA5A450E-14D6-4A53-B69B-F5CB7198CA03}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{AA5A450E-14D6-4A53-B69B-F5CB7198CA03}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{AA5A450E-14D6-4A53-B69B-F5CB7198CA03}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AA5A450E-14D6-4A53-B69B-F5CB7198CA03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA5A450E-14D6-4A53-B69B-F5CB7198CA03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA5A450E-14D6-4A53-B69B-F5CB7198CA03}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{AA5A450E-14D6-4A53-B69B-F5CB7198CA03}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{AA5A450E-14D6-4A53-B69B-F5CB7198CA03}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Algorithms.vsmdi
+	EndGlobalSection
+EndGlobal
