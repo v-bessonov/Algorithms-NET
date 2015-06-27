@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BenchMark\Stopwatch.cs" />
     <Compile Include="BinarySearch\BinarySearch.cs" />
     <Compile Include="Collections\Bag.cs" />
     <Compile Include="Collections\ListEnumerator.cs" />

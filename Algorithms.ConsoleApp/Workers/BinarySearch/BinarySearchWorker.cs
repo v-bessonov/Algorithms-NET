@@ -1,10 +1,9 @@
 ﻿using System;
 using Algorithms.ConsoleApp.Attributes;
 using Algorithms.ConsoleApp.Interfaces;
-using Algorithms.Core.BinarySearch;
 using Algorithms.Core.InOut;
 
-namespace Algorithms.ConsoleApp.Workers
+namespace Algorithms.ConsoleApp.Workers.BinarySearch
 {
     [ConsoleCommand("BinarySearch", "Binary searching for an integer in a sorted array of integers.")]
     public class BinarySearchWorker : IWorker
@@ -74,7 +73,7 @@ namespace Algorithms.ConsoleApp.Workers
                     Console.WriteLine(ex.Message);
                     continue;
                 }
-                var rank = BinarySearch.Rank(key, whitelist);
+                var rank = Core.BinarySearch.BinarySearch.Rank(key, whitelist);
                 Console.WriteLine("key: {0}, rank: {1}", key, rank);
             }
         }

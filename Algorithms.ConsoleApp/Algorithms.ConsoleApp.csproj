@@ -51,15 +51,16 @@
     <Compile Include="Ioc\WorkersBuilder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Workers\BagWorker.cs" />
+    <Compile Include="Workers\BenchMark\BenchMarkWorker.cs" />
+    <Compile Include="Workers\Collections\BagWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\QuickUnionUFWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\UnionUF.cs" />
     <Compile Include="Workers\Sorting\MergeWorker.cs" />
     <Compile Include="Workers\Sorting\SelectionWorker.cs" />
     <Compile Include="Workers\Sorting\InsertionWorker.cs" />
     <Compile Include="Workers\Shuffle\KnuthWorker.cs" />
-    <Compile Include="Workers\InWorker.cs" />
-    <Compile Include="Workers\BinarySearchWorker.cs" />
+    <Compile Include="Workers\InOut\InWorker.cs" />
+    <Compile Include="Workers\BinarySearch\BinarySearchWorker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

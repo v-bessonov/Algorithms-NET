@@ -3,7 +3,7 @@ using Algorithms.ConsoleApp.Attributes;
 using Algorithms.ConsoleApp.Interfaces;
 using Algorithms.Core.InOut;
 
-namespace Algorithms.ConsoleApp.Workers
+namespace Algorithms.ConsoleApp.Workers.InOut
 {
     [ConsoleCommand("InWorker", "Input library")]
     public class InWorker : IWorker

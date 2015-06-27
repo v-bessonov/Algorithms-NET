@@ -4,7 +4,7 @@ using Algorithms.ConsoleApp.Interfaces;
 using Algorithms.Core.Collections;
 using Algorithms.Core.InOut;
 
-namespace Algorithms.ConsoleApp.Workers
+namespace Algorithms.ConsoleApp.Workers.Collections
 {
     [ConsoleCommand("Bag", " A generic bag or multiset, implemented using a singly-linked list.")]
     public class BagWorker : IWorker
