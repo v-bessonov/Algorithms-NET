@@ -55,12 +55,14 @@
     <Compile Include="Workers\Collections\BagWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\QuickUnionUFWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\UnionUF.cs" />
+    <Compile Include="Workers\Sorting\QuickWorker.cs" />
     <Compile Include="Workers\Sorting\MergeWorker.cs" />
     <Compile Include="Workers\Sorting\SelectionWorker.cs" />
     <Compile Include="Workers\Sorting\InsertionWorker.cs" />
     <Compile Include="Workers\Shuffle\KnuthWorker.cs" />
     <Compile Include="Workers\InOut\InWorker.cs" />
     <Compile Include="Workers\BinarySearch\BinarySearchWorker.cs" />
+    <Compile Include="Workers\StdLib\StdRandomWorker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
