@@ -50,13 +50,15 @@
     <Compile Include="QuickUnionUF\QuickUnionUF.cs" />
     <Compile Include="Shuffle\Knuth.cs" />
     <Compile Include="Sorting\AbstractSort.cs" />
+    <Compile Include="Sorting\HeapEnumerator.cs" />
     <Compile Include="Sorting\Insertion.cs" />
+    <Compile Include="Sorting\MinPQ.cs" />
     <Compile Include="Sorting\Quick.cs" />
     <Compile Include="Sorting\Merge.cs" />
     <Compile Include="Sorting\Selection .cs" />
     <Compile Include="Sorting\StringComparable.cs" />
     <Compile Include="Sorting\StringComparer.cs" />
-    <Compile Include="StdLib\StdRandom .cs" />
+    <Compile Include="StdLib\StdRandom.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
