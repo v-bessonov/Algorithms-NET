@@ -55,6 +55,7 @@
     <Compile Include="Workers\Collections\BagWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\QuickUnionUFWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\UnionUF.cs" />
+    <Compile Include="Workers\Sorting\MaxPQWorker.cs" />
     <Compile Include="Workers\Sorting\MinPQWorker.cs" />
     <Compile Include="Workers\Sorting\QuickWorker.cs" />
     <Compile Include="Workers\Sorting\MergeWorker.cs" />

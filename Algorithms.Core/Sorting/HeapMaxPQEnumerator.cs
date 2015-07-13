@@ -4,17 +4,17 @@ using System.Collections.Generic;
 
 namespace Algorithms.Core.Sorting
 {
-    public class HeapEnumerator<T> : IEnumerator<T> where T : class
+    public class HeapMaxPQEnumerator<T> : IEnumerator<T> where T : class
     {
 
         // create a new pq
-        private readonly MinPQ<T> _copy;
+        private readonly MaxPQ<T> _copy;
 
         // add all items to copy of heap
         // takes linear time since already in heap order so no keys move
-        public HeapEnumerator(IComparer<T> comparator, int size, int n, IList<T> pq)
+        public HeapMaxPQEnumerator(IComparer<T> comparator, int size, int n, IList<T> pq)
         {
-            _copy = comparator == null ? new MinPQ<T>(size) : new MinPQ<T>(size, comparator);
+            _copy = comparator == null ? new MaxPQ<T>(size) : new MaxPQ<T>(size, comparator);
             for (var i = 1; i <= n; i++)
                 _copy.Insert(pq[i]);
         }
@@ -36,7 +36,7 @@ namespace Algorithms.Core.Sorting
         public bool MoveNext()
         {
             if (!HasNext()) return false;
-            Current = _copy.DelMin();
+            Current = _copy.DelMax();
             return true;
         }
 
