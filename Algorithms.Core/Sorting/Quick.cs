@@ -5,8 +5,8 @@ using Algorithms.Core.StdLib;
 namespace Algorithms.Core.Sorting
 {
     /// <summary>
-    /// The <tt>Insertion</tt> class provides static methods for sorting an
-    /// list of IComparable using merge sort.
+    /// The <tt>Quick</tt> class provides static methods for sorting an
+    /// list of IComparable using quick sort.
     /// </summary>
     public class Quick : AbstractSort
     {

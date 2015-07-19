@@ -50,11 +50,13 @@
     <Compile Include="QuickUnionUF\QuickUnionUF.cs" />
     <Compile Include="Shuffle\Knuth.cs" />
     <Compile Include="Sorting\AbstractSort.cs" />
+    <Compile Include="Sorting\Heap.cs" />
     <Compile Include="Sorting\HeapMaxPQEnumerator.cs" />
     <Compile Include="Sorting\HeapMinPQEnumerator.cs" />
     <Compile Include="Sorting\Insertion.cs" />
     <Compile Include="Sorting\MaxPQ.cs" />
     <Compile Include="Sorting\MinPQ.cs" />
+    <Compile Include="Sorting\Quick3way.cs" />
     <Compile Include="Sorting\Quick.cs" />
     <Compile Include="Sorting\Merge.cs" />
     <Compile Include="Sorting\Selection .cs" />
