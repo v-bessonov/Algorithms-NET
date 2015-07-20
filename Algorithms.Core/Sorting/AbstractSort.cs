@@ -21,6 +21,18 @@ namespace Algorithms.Core.Sorting
             return (v.CompareTo(w) < 0);
         }
 
+
+        /// <summary>
+        /// does v == w ?
+        /// </summary>
+        /// <param name="v"></param>
+        /// <param name="w"></param>
+        /// <returns></returns>
+        protected static bool Eq(IComparable v, IComparable w)
+        {
+            return (v.CompareTo(w) == 0);
+        }
+
         /// <summary>
         /// exchange a[i] and a[j]
         /// </summary>

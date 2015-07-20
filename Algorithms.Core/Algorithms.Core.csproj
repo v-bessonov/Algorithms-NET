@@ -56,6 +56,7 @@
     <Compile Include="Sorting\Insertion.cs" />
     <Compile Include="Sorting\MaxPQ.cs" />
     <Compile Include="Sorting\MinPQ.cs" />
+    <Compile Include="Sorting\QuickX.cs" />
     <Compile Include="Sorting\Quick3way.cs" />
     <Compile Include="Sorting\Quick.cs" />
     <Compile Include="Sorting\Merge.cs" />

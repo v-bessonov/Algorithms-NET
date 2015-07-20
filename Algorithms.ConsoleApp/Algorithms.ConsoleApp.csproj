@@ -58,6 +58,7 @@
     <Compile Include="Workers\Sorting\MaxPQWorker.cs" />
     <Compile Include="Workers\Sorting\MinPQWorker.cs" />
     <Compile Include="Workers\Sorting\HeapWorker.cs" />
+    <Compile Include="Workers\Sorting\QuickXWorker.cs" />
     <Compile Include="Workers\Sorting\Quick3wayWorker.cs" />
     <Compile Include="Workers\Sorting\QuickWorker.cs" />
     <Compile Include="Workers\Sorting\MergeWorker.cs" />

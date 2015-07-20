@@ -4,6 +4,6 @@
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>-test Quick3way</StartArguments>
+    <StartArguments>-test QuickX</StartArguments>
   </PropertyGroup>
 </Project>
