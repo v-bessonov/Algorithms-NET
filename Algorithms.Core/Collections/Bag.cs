@@ -12,7 +12,7 @@ namespace Algorithms.Core.Collections
     /// This implementation uses a singly-linked list with a class Node.
     /// The <em>add</em>, <em>isEmpty</em>, and <em>size</em> operations
     /// take constant time. Iteration takes time proportional to the number of items.
-    /// <p>
+    /// </p>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class Bag<T> : IEnumerable<T> where T : class 

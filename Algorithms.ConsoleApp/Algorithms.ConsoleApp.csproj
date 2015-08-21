@@ -52,9 +52,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Workers\BenchMark\BenchMarkWorker.cs" />
+    <Compile Include="Workers\Collections\StackWorker.cs" />
     <Compile Include="Workers\Collections\BagWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\QuickUnionUFWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\UnionUF.cs" />
+    <Compile Include="Workers\Sorting\TopMWorker.cs" />
     <Compile Include="Workers\Sorting\MaxPQWorker.cs" />
     <Compile Include="Workers\Sorting\MinPQWorker.cs" />
     <Compile Include="Workers\Sorting\HeapWorker.cs" />
@@ -68,6 +70,8 @@
     <Compile Include="Workers\InOut\InWorker.cs" />
     <Compile Include="Workers\BinarySearch\BinarySearchWorker.cs" />
     <Compile Include="Workers\StdLib\StdRandomWorker.cs" />
+    <Compile Include="Workers\Helpers\TransactionWorker.cs" />
+    <Compile Include="Workers\Helpers\DateWorker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -102,6 +106,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Shuffle\cards.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Sorting\tinyBatch.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Sorting\tiny.txt">

@@ -35,7 +35,7 @@ namespace Algorithms.ConsoleApp.Workers.Sorting
             }
 
 
-            var @in = new In(string.Format("Files\\Sorting\\{0}", fieName));
+            var @in = new In($"Files\\Sorting\\{fieName}");
             var words = @in.ReadAllStrings();
 
             var list = words.Select(word => new StringComparable(word)).ToList();

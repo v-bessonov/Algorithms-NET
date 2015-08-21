@@ -6,8 +6,8 @@ using Algorithms.Core.InOut;
 
 namespace Algorithms.ConsoleApp.Workers.Collections
 {
-    [ConsoleCommand("Bag", " A generic bag or multiset, implemented using a singly-linked list.")]
-    public class BagWorker : IWorker
+    [ConsoleCommand("Stack", " The Stack class represents a last-in-first-out (LIFO) stack of generic items")]
+    public class StackWorker : IWorker
     {
         public void Run()
         {
@@ -19,16 +19,21 @@ namespace Algorithms.ConsoleApp.Workers.Collections
             var @in = new In($"Files\\Collections\\{fieName}");
             var words = @in.ReadAllStrings();
 
-            var bag = new Bag<string>();
+            var stack = new Stack<string>();
 
 
             foreach (var word in words)
             {
-                bag.Add(word);
+                stack.Push(word);
             }
-            Console.WriteLine("size of bag = {0}", bag.Size());
-            foreach (var item in bag)
+            Console.WriteLine("size of stack = {0}", stack.Size());
+            foreach (var item in stack)
             {
+                Console.WriteLine("item = {0}", item);
+            }
+            while (!stack.IsEmpty())
+            {
+                var item = stack.Pop();
                 Console.WriteLine("item = {0}", item);
             }
             Console.ReadLine();

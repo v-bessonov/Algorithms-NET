@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="BenchMark\Stopwatch.cs" />
     <Compile Include="BinarySearch\BinarySearch.cs" />
+    <Compile Include="Collections\Stack.cs" />
     <Compile Include="Collections\Bag.cs" />
     <Compile Include="Collections\ListEnumerator.cs" />
     <Compile Include="Collections\Node.cs" />
@@ -63,7 +64,13 @@
     <Compile Include="Sorting\Selection .cs" />
     <Compile Include="Sorting\StringComparable.cs" />
     <Compile Include="Sorting\StringComparer.cs" />
+    <Compile Include="Sorting\TopM.cs" />
     <Compile Include="StdLib\StdRandom.cs" />
+    <Compile Include="Helpers\Date.cs" />
+    <Compile Include="Helpers\HowMuchOrderComparer.cs" />
+    <Compile Include="Helpers\WhenOrderComparer.cs" />
+    <Compile Include="Helpers\WhoOrderComparer.cs" />
+    <Compile Include="Helpers\Transaction.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
