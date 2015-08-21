@@ -84,6 +84,19 @@ namespace Algorithms.Core.Sorting
         }
 
         /// <summary>
+        /// is the array h-sorted?
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="h"></param>
+        /// <returns></returns>
+        private static bool IsHsorted(IList<IComparable> a, int h)
+        {
+            for (var i = h; i < a.Count; i++)
+                if (Less(a[i], a[i - h])) return false;
+            return true;
+        }
+
+        /// <summary>
         /// print array to standard output
         /// </summary>
         /// <param name="a"></param>
@@ -141,6 +154,20 @@ namespace Algorithms.Core.Sorting
         }
 
         /// <summary>
+        /// is the array h-sorted?
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="h"></param>
+        /// <param name="comparator"></param>
+        /// <returns></returns>
+        protected static bool IsHsorted(IList<T> a, int h, IComparer<T> comparator)
+        {
+            for (var i = h; i < a.Count; i++)
+                if (Less(a[i], a[i - h],comparator)) return false;
+            return true;
+        }
+
+        /// <summary>
         /// Check if list is sorted
         /// </summary>
         /// <param name="a"></param>
@@ -150,6 +177,8 @@ namespace Algorithms.Core.Sorting
         {
             return IsSorted(a, 0, a.Count - 1, comparator);
         }
+
+
 
         /// <summary>
         /// print list to standard output

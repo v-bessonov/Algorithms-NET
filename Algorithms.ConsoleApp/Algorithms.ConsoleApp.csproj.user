@@ -4,6 +4,6 @@
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>-test TopM</StartArguments>
+    <StartArguments>-test Shell</StartArguments>
   </PropertyGroup>
 </Project>
