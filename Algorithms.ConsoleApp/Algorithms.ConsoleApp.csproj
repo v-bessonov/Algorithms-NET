@@ -64,6 +64,7 @@
     <Compile Include="Workers\Sorting\MergeXWorker.cs" />
     <Compile Include="Workers\Sorting\IndexMinPQWorker.cs" />
     <Compile Include="Workers\Sorting\ShellWorker.cs" />
+    <Compile Include="Workers\Sorting\MultiwayWorker.cs" />
     <Compile Include="Workers\Sorting\TopMWorker.cs" />
     <Compile Include="Workers\Sorting\MaxPQWorker.cs" />
     <Compile Include="Workers\Sorting\MinPQWorker.cs" />
@@ -114,6 +115,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Shuffle\cards.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Sorting\m3.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Sorting\m2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Sorting\m1.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Sorting\tinyBatch.txt">
