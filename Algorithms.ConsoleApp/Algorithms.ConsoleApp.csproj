@@ -53,6 +53,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Workers\BenchMark\BenchMarkWorker.cs" />
+    <Compile Include="Workers\Collections\QueueWorker.cs" />
     <Compile Include="Workers\Collections\StackWorker.cs" />
     <Compile Include="Workers\Collections\BagWorker.cs" />
     <Compile Include="Workers\Helpers\VectorWorker.cs" />
