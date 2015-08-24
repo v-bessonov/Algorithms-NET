@@ -89,7 +89,7 @@ namespace Algorithms.Core.Sorting
         /// <param name="a"></param>
         /// <param name="h"></param>
         /// <returns></returns>
-        private static bool IsHsorted(IList<IComparable> a, int h)
+        public static bool IsHsorted(IList<IComparable> a, int h)
         {
             for (var i = h; i < a.Count; i++)
                 if (Less(a[i], a[i - h])) return false;
