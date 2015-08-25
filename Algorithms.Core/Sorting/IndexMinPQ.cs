@@ -5,22 +5,22 @@ using System.Collections.Generic;
 namespace Algorithms.Core.Sorting
 {
     /// <summary>
-    /// The <tt>IndexMinPQ</tt> class represents an indexed priority queue of generic keys.
+    /// The <tt>IndexMinPQ</tt> class represents an indexed priority queue of generic Keys.
     /// It supports the usual <em>insert</em> and <em>delete-the-minimum</em>
     /// operations, along with <em>delete</em> and <em>change-the-key</em> 
-    /// methods. In order to let the client refer to keys on the priority queue,
+    /// methods. In order to let the client refer to Keys on the priority queue,
     /// an integer between 0 and maxN-1 is associated with each key&mdash;the client
     /// uses this integer to specify which key to delete or change.
     /// It also supports methods for peeking at the minimum key,
     /// testing if the priority queue is empty, and iterating through
-    /// the keys.
+    /// the Keys.
     /// <p>
     /// This implementation uses a binary heap along with an array to associate
-    /// keys with integers in the given range.
+    /// Keys with integers in the given range.
     /// The <em>insert</em>, <em>delete-the-minimum</em>, <em>delete</em>,
     /// <em>change-key</em>, <em>decrease-key</em>, and <em>increase-key</em>
     /// operations take logarithmic time.
-    /// The <em>is-empty</em>, <em>size</em>, <em>min-index</em>, <em>min-key</em>, and <em>key-of</em>
+    /// The <em>is-empty</em>, <em>size</em>, <em>Min-index</em>, <em>Min-key</em>, and <em>key-of</em>
     /// operations take constant time.
     /// Construction takes time proportional to the specified capacity.
     /// </p>
@@ -34,13 +34,13 @@ namespace Algorithms.Core.Sorting
         private int _n;           // number of elements on PQ
         private readonly int[] _pq;        // binary heap using 1-based indexing
         private readonly int[] _qp;        // inverse of pq - qp[pq[i]] = pq[qp[i]] = i
-        private readonly T[] _keys;      // keys[i] = priority of i
+        private readonly T[] _keys;      // Keys[i] = priority of i
 
         /// <summary>
         /// Initializes an empty indexed priority queue with indices between <tt>0</tt>
         /// and <tt>maxN - 1</tt>.
         /// </summary>
-        /// <param name="maxN">maxN the keys on this priority queue are index from <tt>0</tt> <tt>maxN - 1</tt></param>
+        /// <param name="maxN">maxN the Keys on this priority queue are index from <tt>0</tt> <tt>maxN - 1</tt></param>
         /// throws ArgumentException if <tt>maxN</tt> &lt; <tt>0</tt>
         public IndexMinPQ(int maxN)
         {
@@ -77,9 +77,9 @@ namespace Algorithms.Core.Sorting
         }
 
         /// <summary>
-        /// Returns the number of keys on this priority queue.
+        /// Returns the number of Keys on this priority queue.
         /// </summary>
-        /// <returns>the number of keys on this priority queue</returns>
+        /// <returns>the number of Keys on this priority queue</returns>
         public int Size()
         {
             return _n;
@@ -281,7 +281,7 @@ namespace Algorithms.Core.Sorting
         #region Iterators
         //
         /// <summary>
-        /// Returns an iterator that iterates over the keys on the priority queue
+        /// Returns an iterator that iterates over the Keys on the priority queue
         /// in ascending order.
         /// The iterator doesn't implement <tt>remove()</tt> since it's optional.
         /// </summary>

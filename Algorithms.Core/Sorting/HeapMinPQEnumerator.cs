@@ -11,7 +11,7 @@ namespace Algorithms.Core.Sorting
         private readonly MinPQ<T> _copy;
 
         // add all items to copy of heap
-        // takes linear time since already in heap order so no keys move
+        // takes linear time since already in heap order so no Keys move
         public HeapMinPQEnumerator(IComparer<T> comparator, int size, int n, IList<T> pq)
         {
             _copy = comparator == null ? new MinPQ<T>(size) : new MinPQ<T>(size, comparator);

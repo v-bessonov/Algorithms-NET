@@ -77,9 +77,9 @@ namespace Algorithms.Core.Sorting
         }
 
         /// <summary>
-        /// Returns the number of keys on this priority queue.
+        /// Returns the number of Keys on this priority queue.
         /// </summary>
-        /// <returns>the number of keys on this priority queue</returns>
+        /// <returns>the number of Keys on this priority queue</returns>
         public int Size()
         {
             return _n;
@@ -281,7 +281,7 @@ namespace Algorithms.Core.Sorting
         #region Iterators
         //
         /// <summary>
-        /// Returns an iterator that iterates over the keys on the priority queue
+        /// Returns an iterator that iterates over the Keys on the priority queue
         /// in ascending order.
         /// The iterator doesn't implement <tt>remove()</tt> since it's optional.
         /// </summary>

@@ -11,7 +11,7 @@ namespace Algorithms.Core.Sorting
         private readonly IndexMinPQ<T> _copy;
 
         // add all items to copy of heap
-        // takes linear time since already in heap order so no keys move
+        // takes linear time since already in heap order so no Keys move
         public HeapIndexMinPQEnumerator(int n, int[] pq, T[] keys)
         {
             _copy = new IndexMinPQ<T>(pq.Length - 1);

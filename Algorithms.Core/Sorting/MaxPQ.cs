@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Algorithms.Core.Sorting
 {
     /// <summary>
-    /// Generic max priority queue implementation with a binary heap.
+    /// Generic Max priority queue implementation with a binary heap.
     /// Can be used with a comparator instead of the natural order.
     /// We use a one-based array to simplify parent and child calculations.
     /// Can be optimized by replacing full exchanges with half exchanges
@@ -62,8 +62,8 @@ namespace Algorithms.Core.Sorting
         }
 
         /// <summary>
-        /// Initializes a priority queue from the array of keys.
-        /// Takes time proportional to the number of keys, using sink-based heap construction.
+        /// Initializes a priority queue from the array of Keys.
+        /// Takes time proportional to the number of Keys, using sink-based heap construction.
         /// </summary>
         /// <param name="keys"></param>
         public MaxPQ(IList<T> keys)
@@ -86,7 +86,7 @@ namespace Algorithms.Core.Sorting
         }
 
         /// <summary>
-        /// Returns the number of keys on the priority queue.
+        /// Returns the number of Keys on the priority queue.
         /// </summary>
         /// <returns></returns>
         public int Size()
@@ -204,7 +204,7 @@ namespace Algorithms.Core.Sorting
         }
 
         /// <summary>
-        /// is pq[1..N] a max heap?
+        /// is pq[1..N] a Max heap?
         /// </summary>
         /// <returns></returns>
         private bool IsMaxHeap()
@@ -213,7 +213,7 @@ namespace Algorithms.Core.Sorting
         }
 
         /// <summary>
-        /// is subtree of pq[1..N] rooted at k a max heap?
+        /// is subtree of pq[1..N] rooted at k a Max heap?
         /// </summary>
         /// <param name="k"></param>
         /// <returns></returns>
@@ -231,7 +231,7 @@ namespace Algorithms.Core.Sorting
         #region Iterators
         //
         /// <summary>
-        /// Returns an iterator that iterates over the keys on the priority queue
+        /// Returns an iterator that iterates over the Keys on the priority queue
         /// in ascending order.
         /// The iterator doesn't implement <tt>remove()</tt> since it's optional.
         /// </summary>

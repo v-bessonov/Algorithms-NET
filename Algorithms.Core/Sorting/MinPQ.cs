@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Algorithms.Core.Sorting
 {
     /// <summary>
-    /// Generic min priority queue implementation with a binary heap.
+    /// Generic Min priority queue implementation with a binary heap.
     /// Can be used with a comparator instead of the natural order.
     /// We use a one-based array to simplify parent and child calculations.
     /// Can be optimized by replacing full exchanges with half exchanges
@@ -204,7 +204,7 @@ namespace Algorithms.Core.Sorting
         }
 
         /// <summary>
-        /// is pq[1..N] a min heap?
+        /// is pq[1..N] a Min heap?
         /// </summary>
         /// <returns></returns>
         private bool IsMinHeap()
@@ -213,7 +213,7 @@ namespace Algorithms.Core.Sorting
         }
 
         /// <summary>
-        /// is subtree of pq[1..N] rooted at k a min heap?
+        /// is subtree of pq[1..N] rooted at k a Min heap?
         /// </summary>
         /// <param name="k"></param>
         /// <returns></returns>
@@ -230,7 +230,7 @@ namespace Algorithms.Core.Sorting
         #region Iterators
         //
         /// <summary>
-        /// Returns an iterator that iterates over the keys on the priority queue
+        /// Returns an iterator that iterates over the Keys on the priority queue
         /// in ascending order.
         /// The iterator doesn't implement <tt>remove()</tt> since it's optional.
         /// </summary>

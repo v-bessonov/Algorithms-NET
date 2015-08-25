@@ -4,7 +4,7 @@
     /// The <tt>BinarySearch</tt> class provides a static method for binary
     /// searching for an integer in a sorted array of integers.
     /// 
-    /// The <em>rank</em> operations takes logarithmic time in the worst case.
+    /// The <em>Rank</em> operations takes logarithmic time in the worst case.
     /// 
     /// </summary>
     public class BinarySearch
