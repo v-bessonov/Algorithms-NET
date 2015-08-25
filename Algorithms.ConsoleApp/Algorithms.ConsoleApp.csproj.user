@@ -4,6 +4,6 @@
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>-test RedBlackBST</StartArguments>
+    <StartArguments>-test SET</StartArguments>
   </PropertyGroup>
 </Project>

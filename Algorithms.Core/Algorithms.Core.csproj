@@ -57,6 +57,8 @@
     <Compile Include="Searching\RedBlackBST.cs" />
     <Compile Include="Searching\BST.cs" />
     <Compile Include="Searching\Node.cs" />
+    <Compile Include="Searching\SET.cs" />
+    <Compile Include="Searching\ST.cs" />
     <Compile Include="Shuffle\Knuth.cs" />
     <Compile Include="Sorting\AbstractSort.cs" />
     <Compile Include="Sorting\Heap.cs" />
