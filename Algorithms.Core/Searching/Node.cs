@@ -13,6 +13,8 @@
 
         public Node<TKey, TValue> Right { get; set; } // right subtree
 
+        public Node<TKey, TValue> Next { get; set; } // next node
+
         public bool Color { get; set; } // color of parent link
 
         public Node(TKey key, TValue val, int n)
@@ -28,6 +30,13 @@
             Value = val;
             Color = color;
             N = n;
+        }
+
+        public Node(TKey key, TValue val, Node<TKey, TValue> next)
+        {
+            Key = key;
+            Value = val;
+            Next = next;
         }
 
     }
