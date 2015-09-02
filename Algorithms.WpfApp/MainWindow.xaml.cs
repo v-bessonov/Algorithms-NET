@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Algorithms.WpfApp.Ioc;
 
 namespace Algorithms.WpfApp
 {
@@ -29,18 +30,17 @@ namespace Algorithms.WpfApp
         private void DrawLine()
         {
 
-            var myLine = new Line
-            {
-                Stroke = Brushes.LightSteelBlue,
-                X1 = 1,
-                X2 = 50,
-                Y1 = 1,
-                Y2 = 50,
-                HorizontalAlignment = HorizontalAlignment.Left,
-                VerticalAlignment = VerticalAlignment.Center,
-                StrokeThickness = 2
-            };
-            MainCanvas.Children.Add(myLine);
+           
+        }
+
+        private void btnStartWorker_Click(object sender, RoutedEventArgs e)
+        {
+            if(comboWorkers.SelectedItem == null) return;
+            var selectedValue = ((ComboBoxItem)comboWorkers.SelectedItem).Content.ToString();
+            var workersBuilder = new WorkersBuilder();
+            var worker = workersBuilder.Resolve(selectedValue);
+            worker.SetCanvas(MainCanvas);
+            worker.Run();
         }
     }
 }

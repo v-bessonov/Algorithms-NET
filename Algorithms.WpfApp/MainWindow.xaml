@@ -5,30 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Algorithms.WpfApp"
         mc:Ignorable="d"
-        Title="Algorithms" Height="900" Width="600" ResizeMode="NoResize">
-    <Grid Height="900"  Width="600">
-        <WrapPanel HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="600">
-            <ComboBox x:Name="comboBox" Width="120"/>
-            <Button x:Name="button" Content="Button" Width="75"/>
+        Title="Algorithms" Height="800" Width="800" ResizeMode="NoResize">
+    <Grid Height="800"  Width="800">
+        <WrapPanel HorizontalAlignment="Left" Height="70" VerticalAlignment="Top" Width="800">
+            <ComboBox x:Name="comboWorkers" Width="120">
+                <ComboBoxItem>Points2D</ComboBoxItem>
+            </ComboBox>
+                <Button x:Name="btnStartWorker" Content="Button" Width="75" Click="btnStartWorker_Click"/>
         </WrapPanel>
 
-
-
-
-
-
-        <Canvas x:Name="MainCanvas" HorizontalAlignment="Left" Height="810" Width="600" Top="70" Left="0" Background="Gainsboro"/>
-        
-        
-        <StatusBar HorizontalAlignment="Left" Height="20"  VerticalAlignment="Bottom" Width="600"/>
-
-        
-
+        <Canvas x:Name="MainCanvas" HorizontalAlignment="Left" Height="710" Width="800" Top="70" Left="0" Background="Gainsboro">
+            <Polyline x:Name="polyline" Stroke="DarkGreen" StrokeThickness="3"/>
+        </Canvas>
+        <StatusBar HorizontalAlignment="Left" Height="20"  VerticalAlignment="Bottom" Width="800"/>
 
     </Grid>
-
-   
-    <!--<Grid>
-        
-    </Grid>-->
 </Window>

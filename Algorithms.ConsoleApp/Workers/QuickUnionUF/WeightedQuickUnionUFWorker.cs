@@ -6,8 +6,8 @@ using Algorithms.Core.InOut;
 
 namespace Algorithms.ConsoleApp.Workers.QuickUnionUF
 {
-    [ConsoleCommand("QuickUnionUF", "Represents a union-find data structure")]
-    public class QuickUnionUFWorker : IWorker
+    [ConsoleCommand("WeightedQuickUnionUF", "Represents a union-find data structure")]
+    public class WeightedQuickUnionUFWorker : IWorker
     {
         /// <summary>
         /// Reads in a sequence of pairs of integers (between 0 and N-1) from standard input, 

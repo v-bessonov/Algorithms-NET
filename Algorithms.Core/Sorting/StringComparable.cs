@@ -2,7 +2,7 @@
 
 namespace Algorithms.Core.Sorting
 {
-    public class StringComparable : IComparable
+    public class StringComparable : IComparable 
     {
         public string Value { get; set; }
 

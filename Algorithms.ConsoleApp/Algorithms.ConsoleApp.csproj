@@ -58,12 +58,15 @@
     <Compile Include="Workers\Collections\BagWorker.cs" />
     <Compile Include="Workers\Context\BTreeWorker.cs" />
     <Compile Include="Workers\Helpers\VectorWorker.cs" />
+    <Compile Include="Workers\QuickUnionUF\WeightedQuickUnionUFWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\QuickUnionUFWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\UnionUF.cs" />
+    <Compile Include="Workers\Searching\FrequencyCounterWorker.cs" />
     <Compile Include="Workers\Searching\SeparateChainingHashSTWorker.cs" />
     <Compile Include="Workers\Searching\SETWorker.cs" />
     <Compile Include="Workers\Searching\LinearProbingHashSTWorker.cs" />
     <Compile Include="Workers\Searching\SequentialSearchSTWorker.cs" />
+    <Compile Include="Workers\Searching\SparseVectorWorker.cs" />
     <Compile Include="Workers\Searching\STWorker.cs" />
     <Compile Include="Workers\Searching\RedBlackBSTWorker.cs" />
     <Compile Include="Workers\Searching\BSTWorker.cs" />
@@ -127,7 +130,13 @@
     <Content Include="Files\Searching\tinySET.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Files\Searching\tale.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Files\Searching\tinyTale.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Searching\leipzig1M.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Searching\tinyST.txt">
