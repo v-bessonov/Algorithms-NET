@@ -4,6 +4,6 @@
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>-test LookupCSV</StartArguments>
+    <StartArguments>-test FileIndex</StartArguments>
   </PropertyGroup>
 </Project>

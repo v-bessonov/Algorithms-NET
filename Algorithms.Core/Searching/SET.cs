@@ -29,11 +29,11 @@ namespace Algorithms.Core.Searching
     /// </p>
     /// </summary>
     /// <typeparam name="TKey">the generic type of a key in this set</typeparam>
-    public class SET<TKey> : IEnumerable<TKey> where TKey : class, IComparable<TKey>
+    public class SET<TKey> : IEnumerable<TKey>, IComparable<SET<TKey>> where TKey : class, IComparable<TKey>
     {
 
 
-        private readonly RedBlackBST<TKey, string> set;
+        private readonly RedBlackBST<TKey, string> _set;
 
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace Algorithms.Core.Searching
         /// </summary>
         public SET()
         {
-            set = new RedBlackBST<TKey, string>();
+            _set = new RedBlackBST<TKey, string>();
         }
 
 
@@ -53,7 +53,7 @@ namespace Algorithms.Core.Searching
         public void Add(TKey key)
         {
             if (key == null) throw new NullReferenceException("called add() with a null key");
-            set.Put(key, string.Empty);
+            _set.Put(key, string.Empty);
         }
 
 
@@ -67,7 +67,7 @@ namespace Algorithms.Core.Searching
         public bool Contains(TKey key)
         {
             if (key == null) throw new NullReferenceException("called contains() with a null key");
-            return set.Contains(key);
+            return _set.Contains(key);
         }
 
         /// <summary>
@@ -78,7 +78,7 @@ namespace Algorithms.Core.Searching
         public void Delete(TKey key)
         {
             if (key == null) throw new NullReferenceException("called delete() with a null key");
-            set.Delete(key);
+            _set.Delete(key);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace Algorithms.Core.Searching
         /// <returns>the number of keys in this set</returns>
         public int Size()
         {
-            return set.Size();
+            return _set.Size();
         }
 
         /// <summary>
@@ -109,7 +109,7 @@ namespace Algorithms.Core.Searching
         /// <returns>an iterator to all of the keys in this set</returns>
         public IEnumerator<TKey> Iterator()
         {
-            return set.Keys().GetEnumerator();
+            return _set.Keys().GetEnumerator();
         }
 
         /// <summary>
@@ -118,7 +118,7 @@ namespace Algorithms.Core.Searching
         /// <returns></returns>
         public IEnumerator<TKey> GetEnumerator()
         {
-            return set.Keys().GetEnumerator();
+            return _set.Keys().GetEnumerator();
         }
 
         /// <summary>
@@ -138,7 +138,7 @@ namespace Algorithms.Core.Searching
         public TKey Max()
         {
             if (IsEmpty()) throw new InvalidOperationException("called max() with empty set");
-            return set.Max();
+            return _set.Max();
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace Algorithms.Core.Searching
         public TKey Min()
         {
             if (IsEmpty()) throw new InvalidOperationException("called min() with empty set");
-            return set.Min();
+            return _set.Min();
         }
 
 
@@ -163,7 +163,7 @@ namespace Algorithms.Core.Searching
         public TKey Ceiling(TKey key)
         {
             if (key == null) throw new NullReferenceException("called ceiling() with a null key");
-            var k = set.Ceiling(key);
+            var k = _set.Ceiling(key);
             if (k == null) throw new InvalidOperationException("all keys are less than " + key);
             return k;
         }
@@ -178,7 +178,7 @@ namespace Algorithms.Core.Searching
         public TKey Floor(TKey key)
         {
             if (key == null) throw new NullReferenceException("called floor() with a null key");
-            var k = set.Floor(key);
+            var k = _set.Floor(key);
             if (k == null) throw new InvalidOperationException("all keys are greater than " + key);
             return k;
         }
@@ -265,6 +265,17 @@ namespace Algorithms.Core.Searching
             throw new NotSupportedException("hashCode() is not supported because sets are mutable");
         }
 
+        public int CompareTo(SET<TKey> that)
+        {
+            var union = Union(that);
+            if (_set.Size() == that.Size() && _set.Size() == union.Size() && that.Size() == union.Size())
+            {
+                return 0;
+            }
+            if (_set.Size() < that.Size()) return -1;
+            return 1;
+        }
+
         /// <summary>
         /// Returns a string representation of this set.
         /// </summary>
@@ -276,5 +287,8 @@ namespace Algorithms.Core.Searching
                 s.AppendFormat($"{key} ");
             return s.ToString();
         }
+
+
+       
     }
 }

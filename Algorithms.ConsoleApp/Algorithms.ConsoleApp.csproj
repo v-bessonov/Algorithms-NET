@@ -68,6 +68,7 @@
     <Compile Include="Workers\Searching\BinarySearchSTWorker.cs" />
     <Compile Include="Workers\Searching\BlackFilterWorker.cs" />
     <Compile Include="Workers\Searching\LookupCSVWorker.cs" />
+    <Compile Include="Workers\Searching\FileIndexWorker.cs" />
     <Compile Include="Workers\Searching\WhiteFilterWorker.cs" />
     <Compile Include="Workers\Searching\FrequencyCounterWorker.cs" />
     <Compile Include="Workers\Searching\SeparateChainingHashSTWorker.cs" />
@@ -147,6 +148,18 @@
     <None Include="Files\Searching\ip.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Content Include="Files\Searching\ex4.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Searching\ex3.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Searching\ex2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Searching\ex1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Files\Searching\tinySET.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
