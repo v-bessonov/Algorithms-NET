@@ -34,6 +34,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ionic.Zip, Version=1.9.6.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.9.6\lib\net20\Ionic.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -67,6 +71,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuickUnionUF\QuickUnionUF.cs" />
     <Compile Include="QuickUnionUF\WeightedQuickUnionUF.cs" />
+    <Compile Include="Searching\BinarySearchST.cs" />
+    <Compile Include="Searching\BlackFilter.cs" />
+    <Compile Include="Searching\LookupCSV.cs" />
+    <Compile Include="Searching\WhiteFilter.cs" />
     <Compile Include="Searching\FrequencyCounter.cs" />
     <Compile Include="Searching\LinearProbingHashST.cs" />
     <Compile Include="Searching\RedBlackBST.cs" />
@@ -110,7 +118,9 @@
     <Compile Include="Helpers\WhoOrderComparer.cs" />
     <Compile Include="Helpers\Transaction.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

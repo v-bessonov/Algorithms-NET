@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using System.IO.Compression;
+using Ionic.Zip;
 
 namespace Algorithms.Core.InOut
 {
@@ -16,7 +18,7 @@ namespace Algorithms.Core.InOut
             try
             {
                 // first try to read file from local file system
-                var path = string.Format("{0}\\{1}", Directory.GetCurrentDirectory(), s);
+                var path = $"{Directory.GetCurrentDirectory()}\\{s}";
                 //var path = s;
                 if (!File.Exists(path))
                 {
@@ -69,6 +71,39 @@ namespace Algorithms.Core.InOut
             }
             var text = File.ReadAllText(_file);
             return text.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+        }
+
+        public string[] ReadAllLinesFromZip()
+        {
+            if (string.IsNullOrWhiteSpace(_file))
+            {
+                Console.Error.WriteLine("file name is empty");
+                throw new Exception();
+            }
+            using (var archive = ZipFile.Read(_file))
+            {
+                foreach (var entry in archive.Entries)
+                {
+                    if (entry.FileName.EndsWith(".csv", StringComparison.OrdinalIgnoreCase))
+                    {
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            entry.Extract(memoryStream);
+                            memoryStream.Position = 0;
+                            using (var reader = new StreamReader(memoryStream))
+                            {
+                                // Just read to the end.
+                                var text = reader.ReadToEnd();
+                                return text.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
+            return null;
+
         }
     }
 }

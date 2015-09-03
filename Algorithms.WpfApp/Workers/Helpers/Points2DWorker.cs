@@ -13,9 +13,7 @@ namespace Algorithms.WpfApp.Workers.Helpers
     public class Points2DWorker : IWorker
     {
         public Canvas Canvas { get; set; }
-        public Points2DWorker()
-        {
-        }
+
         public void Run()
         {
             //var myLine = new Line
@@ -30,10 +28,24 @@ namespace Algorithms.WpfApp.Workers.Helpers
             //    StrokeThickness = 2
             //};
             //Canvas.Children.Add(myLine);
-            for (int i = 0; i < 10; i++)
+            for (var i = 0; i < 100; i++)
             {
-                int x = StdRandom.Uniform(800);
-                int y = StdRandom.Uniform(800);
+                var x = StdRandom.Uniform(800);
+                var y = StdRandom.Uniform(800);
+
+                var ellipse = new Ellipse
+                {
+                    Height = 10,
+                    Width = 10,
+                    StrokeThickness = 2,
+                    Stroke = Brushes.Blue,
+                    Fill = Brushes.Yellow,
+                    Margin = new Thickness
+                    {
+                        Left = x, Top = y, Bottom = 0, Right = 0
+                    }
+
+                };
 
                 //Rectangle rec = new Rectangle();
                 //Canvas.SetTop(rec, y);
@@ -42,7 +54,12 @@ namespace Algorithms.WpfApp.Workers.Helpers
                 //rec.Height = 1;
                 //rec.Fill = new SolidColorBrush(Colors.Red);
                 //Canvas.Children.Add(rec);
-                ((Polyline)Canvas.Children[0]).Points.Add(new Point(x,y));
+                //((Polyline)Canvas.Children[0]).Points.Add(new Point(x,y));
+
+                Canvas.Children.Add(ellipse);
+
+
+
                 //Canvas.Children.Add(new Line
                 //{
                 //    Stroke = Brushes.Red,
@@ -50,7 +67,7 @@ namespace Algorithms.WpfApp.Workers.Helpers
                 //    X2 = x,
                 //    Y1 = y,
                 //    Y2 = y,
-                   
+
                 //    StrokeThickness = 1
                 //});
             }
