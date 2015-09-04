@@ -21,7 +21,7 @@ namespace Algorithms.Core.Collections
     /// </p>
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class Queue<T> : IEnumerable<T> where T : class
+    public class Queue<T> : IEnumerable<T>, IComparable<Queue<T>> where T : class
     {
 
         private int _n;            // number of elements on queue
@@ -130,6 +130,11 @@ namespace Algorithms.Core.Collections
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
+        }
+
+        public int CompareTo(Queue<T> other)
+        {
+            throw new InvalidOperationException("Not supported");
         }
     }
 }

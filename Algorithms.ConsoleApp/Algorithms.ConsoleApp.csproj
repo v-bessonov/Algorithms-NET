@@ -67,6 +67,7 @@
     <Compile Include="Workers\QuickUnionUF\UnionUF.cs" />
     <Compile Include="Workers\Searching\BinarySearchSTWorker.cs" />
     <Compile Include="Workers\Searching\BlackFilterWorker.cs" />
+    <Compile Include="Workers\Searching\LookupIndexWorker.cs" />
     <Compile Include="Workers\Searching\LookupCSVWorker.cs" />
     <Compile Include="Workers\Searching\FileIndexWorker.cs" />
     <Compile Include="Workers\Searching\WhiteFilterWorker.cs" />
@@ -106,6 +107,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Files\Searching\aminol.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Files\Searching\DJIA.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -148,6 +152,9 @@
     <None Include="Files\Searching\ip.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Content Include="Files\Searching\movies.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Files\Searching\ex4.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

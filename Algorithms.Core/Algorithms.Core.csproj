@@ -75,6 +75,7 @@
     <Compile Include="Searching\BlackFilter.cs" />
     <Compile Include="Searching\LookupCSV.cs" />
     <Compile Include="Searching\FileIndex.cs" />
+    <Compile Include="Searching\LookupIndex.cs" />
     <Compile Include="Searching\WhiteFilter.cs" />
     <Compile Include="Searching\FrequencyCounter.cs" />
     <Compile Include="Searching\LinearProbingHashST.cs" />
