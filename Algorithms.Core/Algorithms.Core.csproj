@@ -57,6 +57,8 @@
     <Compile Include="Context\BTree.cs" />
     <Compile Include="Context\Entry.cs" />
     <Compile Include="Context\Node.cs" />
+    <Compile Include="Graphs\Edge.cs" />
+    <Compile Include="Graphs\Graph.cs" />
     <Compile Include="Helpers\DistanceToOrderComparer.cs" />
     <Compile Include="Helpers\Double.cs" />
     <Compile Include="Helpers\Integer.cs" />
