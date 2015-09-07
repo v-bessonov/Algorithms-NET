@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Algorithms.WpfApp"
+        xmlns:wpf="clr-namespace:Graphviz4Net.WPF;assembly=Graphviz4Net.WPF"
         mc:Ignorable="d"
         Title="Algorithms" Height="800" Width="800" ResizeMode="NoResize">
     <Grid Height="800"  Width="800">
@@ -21,3 +22,5 @@
 
     </Grid>
 </Window>
+
+

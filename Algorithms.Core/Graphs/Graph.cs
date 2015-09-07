@@ -7,21 +7,42 @@ using Algorithms.Core.Helpers;
 
 namespace Algorithms.Core.Graphs
 {
+    /// <summary>
+    ///  The <tt>Graph</tt> class represents an undirected graph of vertices
+    /// named 0 through <em>V</em> - 1.
+    /// It supports the following two primary operations: add an edge to the graph,
+    /// iterate over all of the vertices adjacent to a vertex. It also provides
+    /// methods for returning the number of vertices <em>V</em> and the number
+    /// of edges <em>E</em>. Parallel edges and self-loops are permitted.
+    /// <p>
+    /// This implementation uses an adjacency-lists representation, which 
+    /// is a vertex-indexed array of {@link Bag} objects.
+    /// All operations take constant time (in the worst case) except
+    /// iterating over the vertices adjacent to a given vertex, which takes
+    /// time proportional to the number of such vertices.
+    /// </p>
+    /// </summary>
     public class Graph
     {
         private readonly string _newline = Environment.NewLine;
-
+        /// <summary>
+        /// 
+        /// </summary>
         public int V { get; }
+        /// <summary>
+        /// 
+        /// </summary>
         public int E { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         private readonly Bag<Integer>[] _adj;
 
-        /**
-     * Initializes an empty graph with <tt>V</tt> vertices and 0 edges.
-     * param V the number of vertices
-     *
-     * @param  V number of vertices
-     * @throws IllegalArgumentException if <tt>V</tt> < 0
-     */
+        /// <summary>
+        /// Initializes an empty graph with <tt>V</tt> vertices and 0 edges.
+        /// </summary>
+        /// <param name="v">V number of vertices</param>
+        /// <exception cref="ArgumentException">if <tt>V</tt> < 0</exception>
         public Graph(int v)
         {
             if (V < 0) throw new ArgumentException("Number of vertices must be nonnegative");
@@ -30,39 +51,38 @@ namespace Algorithms.Core.Graphs
             _adj = new Bag<Integer>[V];
             for (var i = 0; i < V; i++)
             {
-                _adj[v] = new Bag<Integer>();
+                _adj[i] = new Bag<Integer>();
             }
         }
 
-        /**  
-    * Initializes a graph from an input stream.
-    * The format is the number of vertices <em>V</em>,
-    * followed by the number of edges <em>E</em>,
-    * followed by <em>E</em> pairs of vertices, with each entry separated by whitespace.
-    *
-    * @param  in the input stream
-    * @throws IndexOutOfBoundsException if the endpoints of any edge are not in prescribed range
-    * @throws IllegalArgumentException if the number of vertices or edges is negative
-    */
+        /// <summary>
+        /// Initializes a graph from an input stream.
+        /// The format is the number of vertices <em>V</em>,
+        /// followed by the number of edges <em>E</em>,
+        /// followed by <em>E</em> pairs of vertices, with each entry separated by whitespace.
+        /// </summary>
+        /// <param name="v"></param>
+        /// <param name="e"></param>
+        /// <param name="edges"></param>
+        /// <exception cref="ArgumentException">if the number of vertices or edges is negative</exception>
         public Graph(int v, int e, IEnumerable<Edge> edges) : this(v)
         {
             edges = edges.ToList();
-            if (e < 0) throw new ArgumentException("Number of edges must be nonnegative");
+            if (v < 0  || e < 0) throw new ArgumentException("Number of vertices and edges must be nonnegative");
             if (e != edges.Count()) throw new ArgumentException("Number of edges doesn't match");
             foreach (var edge in edges)
             {
-                var vv = edge.V;
-                var w = edge.W;
-                AddEdge(vv, w);
+                var ve = edge.V;
+                var we = edge.W;
+                AddEdge(ve, we);
             }
 
         }
 
-        /**
-     * Initializes a new graph that is a deep copy of <tt>G</tt>.
-     *
-     * @param  G the graph to copy
-     */
+        /// <summary>
+        /// Initializes a new graph that is a deep copy of <tt>G</tt>.
+        /// </summary>
+        /// <param name="g">g the graph to copy</param>
         public Graph(Graph g) :this(g.V)
         {
             E = g.E;
@@ -81,20 +101,23 @@ namespace Algorithms.Core.Graphs
             }
         }
 
-        // throw an IndexOutOfBoundsException unless 0 <= v < V
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="v"></param>
+        /// <exception cref="IndexOutOfRangeException">unless 0 <= v < V</exception>
         private void ValidateVertex(int v)
         {
             if (v < 0 || v >= V)
                 throw new IndexOutOfRangeException("vertex " + v + " is not between 0 and " + (V - 1));
         }
 
-        /**
-         * Adds the undirected edge v-w to this graph.
-         *
-         * @param  v one vertex in the edge
-         * @param  w the other vertex in the edge
-         * @throws IndexOutOfBoundsException unless both 0 <= v < V and 0 <= w < V
-         */
+        /// <summary>
+        /// Adds the undirected edge v-w to this graph.
+        /// </summary>
+        /// <param name="v">v one vertex in the edge</param>
+        /// <param name="w">w the other vertex in the edge</param>
+        /// <exception cref="IndexOutOfRangeException">unless both 0 &lt;= v &lt; V and 0 &lt;= w &lt; V</exception>
         public void AddEdge(int v, int w)
         {
             ValidateVertex(v);
@@ -104,38 +127,34 @@ namespace Algorithms.Core.Graphs
             _adj[w].Add(v);
         }
 
-        /**
-    * Returns the vertices adjacent to vertex <tt>v</tt>.
-    *
-    * @param  v the vertex
-    * @return the vertices adjacent to vertex <tt>v</tt>, as an iterable
-    * @throws IndexOutOfBoundsException unless 0 <= v < V
-    */
+        /// <summary>
+        /// Returns the vertices adjacent to vertex <tt>v</tt>.
+        /// </summary>
+        /// <param name="v">v the vertex</param>
+        /// <returns>the vertices adjacent to vertex <tt>v</tt>, as an iterable</returns>
+        /// <exception cref="IndexOutOfRangeException">unless 0 &lt;= v &lt; V</exception>
         public IEnumerable<Integer> Adj(int v)
         {
             ValidateVertex(v);
             return _adj[v];
         }
 
-        /**
-         * Returns the degree of vertex <tt>v</tt>.
-         *
-         * @param  v the vertex
-         * @return the degree of vertex <tt>v</tt>
-         * @throws IndexOutOfBoundsException unless 0 <= v < V
-         */
+        /// <summary>
+        /// Returns the degree of vertex <tt>v</tt>.
+        /// </summary>
+        /// <param name="v">v the vertex</param>
+        /// <returns>the degree of vertex <tt>v</tt></returns>
+        /// <exception cref="IndexOutOfRangeException">unless 0 &lt;= v &lt; V</exception>
         public int Degree(int v)
         {
             ValidateVertex(v);
             return _adj[v].Size();
         }
 
-        /**
-     * Returns a string representation of this graph.
-     *
-     * @return the number of vertices <em>V</em>, followed by the number of edges <em>E</em>,
-     *         followed by the <em>V</em> adjacency lists
-     */
+        /// <summary>
+        /// Returns a string representation of this graph.
+        /// </summary>
+        /// <returns>he number of vertices <em>V</em>, followed by the number of edges <em>E</em>, followed by the <em>V</em> adjacency lists</returns>
         public override string ToString()
         {
             var s = new StringBuilder();
