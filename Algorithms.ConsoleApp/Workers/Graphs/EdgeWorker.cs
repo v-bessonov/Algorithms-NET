@@ -5,13 +5,17 @@ using Algorithms.Core.Graphs;
 
 namespace Algorithms.ConsoleApp.Workers.Graphs
 {
-    [ConsoleCommand("Edge", "Class represents a weighted edge")]
+    [ConsoleCommand("Edge", "Class represents a edge")]
     public class EdgeWorker : IWorker
     {
         public void Run()
         {
-            var e = new Edge(12, 34, 5.67);
-            Console.WriteLine(e);
+            var eu = new EdgeU(100, 50);
+            var ed = new EdgeD(22, 11);
+            var ew = new EdgeW(12, 34, 5.67);
+            Console.WriteLine(eu);
+            Console.WriteLine(ed);
+            Console.WriteLine(ew);
             Console.ReadLine();
         }
     }

@@ -61,6 +61,7 @@
     <Compile Include="Workers\Collections\StackWorker.cs" />
     <Compile Include="Workers\Collections\BagWorker.cs" />
     <Compile Include="Workers\Context\BTreeWorker.cs" />
+    <Compile Include="Workers\Graphs\GraphGeneratorWorker.cs" />
     <Compile Include="Workers\Graphs\GraphWorker.cs" />
     <Compile Include="Workers\Graphs\EdgeWorker.cs" />
     <Compile Include="Workers\Helpers\VectorWorker.cs" />

@@ -65,7 +65,7 @@ namespace Algorithms.Core.Graphs
         /// <param name="e"></param>
         /// <param name="edges"></param>
         /// <exception cref="ArgumentException">if the number of vertices or edges is negative</exception>
-        public Graph(int v, int e, IEnumerable<Edge> edges) : this(v)
+        public Graph(int v, int e, IEnumerable<EdgeU> edges) : this(v)
         {
             edges = edges.ToList();
             if (v < 0  || e < 0) throw new ArgumentException("Number of vertices and edges must be nonnegative");

@@ -40,7 +40,7 @@ namespace Algorithms.ConsoleApp.Workers.Graphs
             var lineIterator = 0;
             var v = 0;
             var e = 0;
-            var edges = new List<Edge>();
+            var edges = new List<EdgeU>();
             foreach (var line in lines)
             {
                 if (lineIterator == 0)
@@ -56,7 +56,7 @@ namespace Algorithms.ConsoleApp.Workers.Graphs
                     var lineSplitted = line.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
                     var ve = Convert.ToInt32(lineSplitted[0]);
                     var we = Convert.ToInt32(lineSplitted[1]);
-                    var edge = new Edge(ve, we, 0.0);
+                    var edge = new EdgeU(ve, we);
                     edges.Add(edge);
                 }
 
