@@ -57,9 +57,11 @@
     <Compile Include="Context\BTree.cs" />
     <Compile Include="Context\Entry.cs" />
     <Compile Include="Context\Node.cs" />
+    <Compile Include="Graphs\NonrecursiveDFS.cs" />
     <Compile Include="Graphs\EdgeD.cs" />
     <Compile Include="Graphs\EdgeU.cs" />
     <Compile Include="Graphs\EdgeW.cs" />
+    <Compile Include="Graphs\DepthFirstSearch.cs" />
     <Compile Include="Graphs\Egde.cs" />
     <Compile Include="Graphs\GraphGenerator.cs" />
     <Compile Include="Graphs\Graph.cs" />
@@ -125,6 +127,9 @@
     <Compile Include="Helpers\WhenOrderComparer.cs" />
     <Compile Include="Helpers\WhoOrderComparer.cs" />
     <Compile Include="Helpers\Transaction.cs" />
+    <Compile Include="Strings\Count.cs" />
+    <Compile Include="Strings\Alphabet.cs" />
+    <Compile Include="Strings\LSD.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

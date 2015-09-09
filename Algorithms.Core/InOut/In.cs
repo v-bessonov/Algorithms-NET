@@ -62,6 +62,16 @@ namespace Algorithms.Core.InOut
             return text.Split(new[]{" ", "\t", Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries);
         }
 
+        public string ReadAll()
+        {
+            if (string.IsNullOrWhiteSpace(_file))
+            {
+                Console.Error.WriteLine("file name is empty");
+                throw new Exception();
+            }
+            return File.ReadAllText(_file);
+        }
+
         public string[] ReadAllLines()
         {
             if (string.IsNullOrWhiteSpace(_file))
