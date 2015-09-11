@@ -40,7 +40,7 @@ namespace Algorithms.ConsoleApp.Workers.InOut
             }
 
 
-            var @in = new In(string.Format("Files\\BinarySearch\\{0}", fieName));
+            var @in = new In($"Files\\BinarySearch\\{fieName}");
             @in.ReadAllInts();
         }
     }

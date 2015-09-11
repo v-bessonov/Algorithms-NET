@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\ConsoleCommandAttribute.cs" />
+    <Compile Include="Beyond\FFTWorker.cs" />
     <Compile Include="Entities\Arguments.cs" />
     <Compile Include="Enums\CommandType.cs" />
     <Compile Include="Interfaces\IWorker.cs" />
@@ -61,12 +62,15 @@
     <Compile Include="Workers\Collections\StackWorker.cs" />
     <Compile Include="Workers\Collections\BagWorker.cs" />
     <Compile Include="Workers\Context\BTreeWorker.cs" />
+    <Compile Include="Workers\Graphs\DepthFirstPathsWorker.cs" />
     <Compile Include="Workers\Graphs\NonrecursiveDFSWorker.cs" />
     <Compile Include="Workers\Graphs\GraphGeneratorWorker.cs" />
     <Compile Include="Workers\Graphs\DepthFirstSearchWorker.cs" />
     <Compile Include="Workers\Graphs\GraphWorker.cs" />
     <Compile Include="Workers\Graphs\EdgeWorker.cs" />
+    <Compile Include="Workers\Helpers\ComplexWorker.cs" />
     <Compile Include="Workers\Helpers\VectorWorker.cs" />
+    <Compile Include="Workers\InOut\BinaryOutWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\WeightedQuickUnionUFWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\QuickUnionUFWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\UnionUF.cs" />
@@ -109,6 +113,7 @@
     <Compile Include="Workers\StdLib\StdRandomWorker.cs" />
     <Compile Include="Workers\Helpers\TransactionWorker.cs" />
     <Compile Include="Workers\Helpers\DateWorker.cs" />
+    <Compile Include="Workers\Strings\MSDWorker.cs" />
     <Compile Include="Workers\Strings\LSDWorker.cs" />
     <Compile Include="Workers\Strings\CountWorker.cs" />
     <Compile Include="Workers\Strings\AlphabetWorker.cs" />
@@ -154,6 +159,9 @@
     <Content Include="Files\Graphs\mediumG.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Files\Graphs\tinyCG.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Files\Graphs\tinyG.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -164,6 +172,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\QuickUnionUF\tinyUF.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Strings\shells.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Strings\pi.txt">
