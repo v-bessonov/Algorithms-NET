@@ -94,7 +94,7 @@ namespace Algorithms.Core.InOut
             {
                 foreach (var entry in archive.Entries)
                 {
-                    if (entry.FileName.EndsWith(".csv", StringComparison.OrdinalIgnoreCase))
+                    if (entry.FileName.EndsWith(".csv", StringComparison.OrdinalIgnoreCase) || entry.FileName.EndsWith(".txt", StringComparison.OrdinalIgnoreCase))
                     {
                         using (var memoryStream = new MemoryStream())
                         {

@@ -251,7 +251,7 @@ namespace Algorithms.Core.StdLib
         /// Rearrange the elements of an array in random order.
         /// </summary>
         /// <param name="a"></param>
-        public static void Shuffle(Object[] a)
+        public static void Shuffle(object[] a)
         {
             var n = a.Length;
             for (var i = 0; i < n; i++)

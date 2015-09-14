@@ -41,7 +41,43 @@ namespace Algorithms.ConsoleApp.Workers.InOut
 
 
             var binaryOut = new BinaryOut();
-            binaryOut.Write(1005);
+            binaryOut.Write((byte)6);
+            Console.WriteLine();
+            binaryOut.Write(true);
+            Console.WriteLine();
+            binaryOut.Write(false);
+            Console.WriteLine();
+            binaryOut.Write(short.MaxValue);
+            Console.WriteLine();
+            binaryOut.Write((short)5);
+            Console.WriteLine();
+            binaryOut.Write(int.MaxValue);
+            Console.WriteLine();
+            binaryOut.Write((int)5);
+            Console.WriteLine();
+            binaryOut.Write(long.MaxValue);
+            Console.WriteLine();
+            binaryOut.Write((long)5);
+            Console.WriteLine();
+            binaryOut.Write(float.MaxValue);
+            Console.WriteLine();
+            binaryOut.Write((float)5.0);
+            Console.WriteLine();
+            binaryOut.Write(double.MaxValue);
+            Console.WriteLine();
+            binaryOut.Write((double)5.0);
+            Console.WriteLine();
+            binaryOut.Write(decimal.MaxValue);
+            Console.WriteLine();
+            binaryOut.Write((decimal)5.0);
+            Console.WriteLine();
+            binaryOut.Write('r');
+            Console.WriteLine();
+            binaryOut.Write("test");
+            Console.WriteLine();
+            binaryOut.Write('r', 2);
+            Console.WriteLine();
+
             Console.ReadLine();
         }
     }

@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -62,6 +63,7 @@
     <Compile Include="Workers\Collections\StackWorker.cs" />
     <Compile Include="Workers\Collections\BagWorker.cs" />
     <Compile Include="Workers\Context\BTreeWorker.cs" />
+    <Compile Include="Workers\Graphs\BreadthFirstPaths.cs" />
     <Compile Include="Workers\Graphs\DepthFirstPathsWorker.cs" />
     <Compile Include="Workers\Graphs\NonrecursiveDFSWorker.cs" />
     <Compile Include="Workers\Graphs\GraphGeneratorWorker.cs" />
@@ -113,6 +115,7 @@
     <Compile Include="Workers\StdLib\StdRandomWorker.cs" />
     <Compile Include="Workers\Helpers\TransactionWorker.cs" />
     <Compile Include="Workers\Helpers\DateWorker.cs" />
+    <Compile Include="Workers\Strings\Quick3stringWorker.cs" />
     <Compile Include="Workers\Strings\MSDWorker.cs" />
     <Compile Include="Workers\Strings\LSDWorker.cs" />
     <Compile Include="Workers\Strings\CountWorker.cs" />

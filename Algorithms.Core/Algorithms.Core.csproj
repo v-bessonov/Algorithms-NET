@@ -58,6 +58,7 @@
     <Compile Include="Context\BTree.cs" />
     <Compile Include="Context\Entry.cs" />
     <Compile Include="Context\Node.cs" />
+    <Compile Include="Graphs\BreadthFirstPaths.cs" />
     <Compile Include="Graphs\DepthFirstPaths.cs" />
     <Compile Include="Graphs\NonrecursiveDFS.cs" />
     <Compile Include="Graphs\EdgeD.cs" />
@@ -133,6 +134,7 @@
     <Compile Include="Helpers\Transaction.cs" />
     <Compile Include="Strings\Count.cs" />
     <Compile Include="Strings\Alphabet.cs" />
+    <Compile Include="Strings\Quick3string.cs" />
     <Compile Include="Strings\MSD.cs" />
     <Compile Include="Strings\LSD.cs" />
   </ItemGroup>
