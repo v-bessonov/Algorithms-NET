@@ -66,6 +66,7 @@
     <Compile Include="Workers\Graphs\BreadthFirstPaths.cs" />
     <Compile Include="Workers\Graphs\DepthFirstPathsWorker.cs" />
     <Compile Include="Workers\Graphs\CCWorker.cs" />
+    <Compile Include="Workers\Graphs\BipartiteWorker.cs" />
     <Compile Include="Workers\Graphs\NonrecursiveDFSWorker.cs" />
     <Compile Include="Workers\Graphs\GraphGeneratorWorker.cs" />
     <Compile Include="Workers\Graphs\DepthFirstSearchWorker.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Workers\StdLib\StdRandomWorker.cs" />
     <Compile Include="Workers\Helpers\TransactionWorker.cs" />
     <Compile Include="Workers\Helpers\DateWorker.cs" />
+    <Compile Include="Workers\Strings\BoyerMooreWorker.cs" />
     <Compile Include="Workers\Strings\KMPWorker.cs" />
     <Compile Include="Workers\Strings\Quick3stringWorker.cs" />
     <Compile Include="Workers\Strings\MSDWorker.cs" />

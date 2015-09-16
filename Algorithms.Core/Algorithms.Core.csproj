@@ -61,6 +61,7 @@
     <Compile Include="Graphs\BreadthFirstPaths.cs" />
     <Compile Include="Graphs\DepthFirstPaths.cs" />
     <Compile Include="Graphs\CC.cs" />
+    <Compile Include="Graphs\Bipartite.cs" />
     <Compile Include="Graphs\NonrecursiveDFS.cs" />
     <Compile Include="Graphs\EdgeD.cs" />
     <Compile Include="Graphs\EdgeU.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="Helpers\Transaction.cs" />
     <Compile Include="Strings\Count.cs" />
     <Compile Include="Strings\Alphabet.cs" />
+    <Compile Include="Strings\BoyerMoore.cs" />
     <Compile Include="Strings\KMP.cs" />
     <Compile Include="Strings\Quick3string.cs" />
     <Compile Include="Strings\MSD.cs" />
