@@ -58,7 +58,9 @@
     <Compile Include="Context\BTree.cs" />
     <Compile Include="Context\Entry.cs" />
     <Compile Include="Context\Node.cs" />
+    <Compile Include="Graphs\BipartiteX.cs" />
     <Compile Include="Graphs\BreadthFirstPaths.cs" />
+    <Compile Include="Graphs\Cycle.cs" />
     <Compile Include="Graphs\DepthFirstPaths.cs" />
     <Compile Include="Graphs\CC.cs" />
     <Compile Include="Graphs\Bipartite.cs" />
