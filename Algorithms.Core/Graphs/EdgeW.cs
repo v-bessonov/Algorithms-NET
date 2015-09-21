@@ -16,6 +16,10 @@ namespace Algorithms.Core.Graphs
         /// Returns the weight of this edge.
         /// </summary>
         public double Weight { get; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool IsUsed { get; set; }
 
         /// <summary>
         /// Initializes an edge between vertices <tt>v</tt> and <tt>w</tt> of
@@ -34,6 +38,7 @@ namespace Algorithms.Core.Graphs
             V = v;
             W = w;
             Weight = weight;
+            IsUsed = false;
         }
 
         /// <summary>

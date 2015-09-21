@@ -65,6 +65,7 @@
     <Compile Include="Workers\Context\BTreeWorker.cs" />
     <Compile Include="Workers\Graphs\BipartiteXWorker.cs" />
     <Compile Include="Workers\Graphs\BreadthFirstPaths.cs" />
+    <Compile Include="Workers\Graphs\EulerianCycleWorker.cs" />
     <Compile Include="Workers\Graphs\CycleWorker.cs" />
     <Compile Include="Workers\Graphs\DepthFirstPathsWorker.cs" />
     <Compile Include="Workers\Graphs\CCWorker.cs" />

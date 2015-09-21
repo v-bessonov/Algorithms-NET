@@ -60,6 +60,7 @@
     <Compile Include="Context\Node.cs" />
     <Compile Include="Graphs\BipartiteX.cs" />
     <Compile Include="Graphs\BreadthFirstPaths.cs" />
+    <Compile Include="Graphs\EulerianCycle.cs" />
     <Compile Include="Graphs\Cycle.cs" />
     <Compile Include="Graphs\DepthFirstPaths.cs" />
     <Compile Include="Graphs\CC.cs" />

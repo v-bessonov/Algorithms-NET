@@ -202,6 +202,56 @@ namespace Algorithms.Core.Graphs
 
 
         /// <summary>
+        /// Returns an Eulerian cycle graph on <tt>V</tt> vertices.
+        /// </summary>
+        /// <param name="v">V the number of vertices in the cycle</param>
+        /// <param name="e">E the number of edges in the cycle</param>
+        /// <returns>a graph that is an Eulerian cycle on <tt>V</tt> vertices and <tt>E</tt> edges</returns>
+        /// <exception cref="ArgumentException">if either V &le; 0 or E &le; 0</exception>
+        public static Graph EulerianCycle(int v, int e)
+        {
+            if (e <= 0)
+                throw new ArgumentException("An Eulerian cycle must have at least one edge");
+            if (v <= 0)
+                throw new ArgumentException("An Eulerian cycle must have at least one vertex");
+            var g = new Graph(v);
+            var vertices = new int[e];
+            for (var i = 0; i < e; i++)
+                vertices[i] = StdRandom.Uniform(v);
+            for (var i = 0; i < e - 1; i++)
+            {
+                g.AddEdge(vertices[i], vertices[i + 1]);
+            }
+            g.AddEdge(vertices[e - 1], vertices[0]);
+            return g;
+        }
+
+        /// <summary>
+        /// Returns an Eulerian path graph on <tt>V</tt> vertices.
+        /// </summary>
+        /// <param name="v">V the number of vertices in the path</param>
+        /// <param name="e">E the number of edges in the path</param>
+        /// <returns>a graph that is an Eulerian path on <tt>V</tt> vertices and <tt>E</tt> edges</returns>
+        /// <exception cref="ArgumentException">if either V &le; 0 or E &lt; 0</exception>
+        public static Graph EulerianPath(int v, int e)
+        {
+            if (e < 0)
+                throw new ArgumentException("negative number of edges");
+            if (v <= 0)
+                throw new ArgumentException("An Eulerian path must have at least one vertex");
+            var g = new Graph(v);
+            var vertices = new int[e + 1];
+            for (var i = 0; i < e + 1; i++)
+                vertices[i] = StdRandom.Uniform(v);
+            for (var i = 0; i < e; i++)
+            {
+                g.AddEdge(vertices[i], vertices[i + 1]);
+            }
+            return g;
+        }
+
+
+        /// <summary>
         /// Returns a wheel graph on <tt>V</tt> vertices.
         /// </summary>
         /// <param name="v">V the number of vertices in the wheel</param>
