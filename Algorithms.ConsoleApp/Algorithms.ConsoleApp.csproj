@@ -66,6 +66,9 @@
     <Compile Include="Workers\Graphs\BipartiteXWorker.cs" />
     <Compile Include="Workers\Graphs\BreadthFirstPaths.cs" />
     <Compile Include="Workers\Graphs\DegreesOfSeparationWorker.cs" />
+    <Compile Include="Workers\Graphs\BreadthFirstDirectedPathsWorker.cs" />
+    <Compile Include="Workers\Graphs\NonrecursiveDirectedDFSWorker.cs" />
+    <Compile Include="Workers\Graphs\DirectedDFSWorker.cs" />
     <Compile Include="Workers\Graphs\DigraphWorker.cs" />
     <Compile Include="Workers\Graphs\DigraphGeneratorWorker.cs" />
     <Compile Include="Workers\Graphs\SymbolGraphWorker.cs" />
@@ -81,6 +84,7 @@
     <Compile Include="Workers\Graphs\GraphWorker.cs" />
     <Compile Include="Workers\Graphs\EdgeWorker.cs" />
     <Compile Include="Workers\Helpers\ComplexWorker.cs" />
+    <Compile Include="Workers\Helpers\NumericsWorker.cs" />
     <Compile Include="Workers\Helpers\VectorWorker.cs" />
     <Compile Include="Workers\InOut\BinaryOutWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\WeightedQuickUnionUFWorker.cs" />
@@ -126,6 +130,7 @@
     <Compile Include="Workers\Helpers\TransactionWorker.cs" />
     <Compile Include="Workers\Helpers\DateWorker.cs" />
     <Compile Include="Workers\Strings\BoyerMooreWorker.cs" />
+    <Compile Include="Workers\Strings\RabinKarpWorker.cs" />
     <Compile Include="Workers\Strings\KMPWorker.cs" />
     <Compile Include="Workers\Strings\Quick3stringWorker.cs" />
     <Compile Include="Workers\Strings\MSDWorker.cs" />
@@ -181,6 +186,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Graphs\movies.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Graphs\mediumDG.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Graphs\tinyDG.txt">

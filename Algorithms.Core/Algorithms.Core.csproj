@@ -59,7 +59,9 @@
     <Compile Include="Context\Entry.cs" />
     <Compile Include="Context\Node.cs" />
     <Compile Include="Graphs\BipartiteX.cs" />
+    <Compile Include="Graphs\BreadthFirstDirectedPaths.cs" />
     <Compile Include="Graphs\BreadthFirstPaths.cs" />
+    <Compile Include="Graphs\DirectedDFS.cs" />
     <Compile Include="Graphs\EulerianPath.cs" />
     <Compile Include="Graphs\EulerianCycle.cs" />
     <Compile Include="Graphs\Cycle.cs" />
@@ -77,11 +79,13 @@
     <Compile Include="Graphs\GraphGenerator.cs" />
     <Compile Include="Graphs\Graph.cs" />
     <Compile Include="Graphs\DegreesOfSeparation.cs" />
+    <Compile Include="Graphs\NonrecursiveDirectedDFS.cs" />
     <Compile Include="Graphs\SymbolGraph.cs" />
     <Compile Include="Helpers\Complex.cs" />
     <Compile Include="Helpers\DistanceToOrderComparer.cs" />
     <Compile Include="Helpers\Double.cs" />
     <Compile Include="Helpers\Integer.cs" />
+    <Compile Include="Helpers\Numerics.cs" />
     <Compile Include="Helpers\PolarOrderComparer.cs" />
     <Compile Include="Helpers\Point2D.cs" />
     <Compile Include="Helpers\Atan2OrderComparer.cs" />
@@ -149,6 +153,7 @@
     <Compile Include="Strings\Quick3string.cs" />
     <Compile Include="Strings\MSD.cs" />
     <Compile Include="Strings\LSD.cs" />
+    <Compile Include="Strings\RabinKarp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
