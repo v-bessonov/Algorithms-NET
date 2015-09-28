@@ -4,6 +4,6 @@
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>-test BreadthFirstDirectedPaths</StartArguments>
+    <StartArguments>-test DirectedCycleX</StartArguments>
   </PropertyGroup>
 </Project>

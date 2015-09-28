@@ -65,6 +65,8 @@
     <Compile Include="Workers\Context\BTreeWorker.cs" />
     <Compile Include="Workers\Graphs\BipartiteXWorker.cs" />
     <Compile Include="Workers\Graphs\BreadthFirstPaths.cs" />
+    <Compile Include="Workers\Graphs\DirectedCycleXWorker.cs" />
+    <Compile Include="Workers\Graphs\DirectedCycleWorker.cs" />
     <Compile Include="Workers\Graphs\DegreesOfSeparationWorker.cs" />
     <Compile Include="Workers\Graphs\BreadthFirstDirectedPathsWorker.cs" />
     <Compile Include="Workers\Graphs\NonrecursiveDirectedDFSWorker.cs" />
@@ -189,6 +191,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Graphs\mediumDG.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Graphs\tinyDAG.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Graphs\tinyDG.txt">

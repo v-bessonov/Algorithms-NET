@@ -61,6 +61,8 @@
     <Compile Include="Graphs\BipartiteX.cs" />
     <Compile Include="Graphs\BreadthFirstDirectedPaths.cs" />
     <Compile Include="Graphs\BreadthFirstPaths.cs" />
+    <Compile Include="Graphs\DirectedCycle.cs" />
+    <Compile Include="Graphs\DirectedCycleX.cs" />
     <Compile Include="Graphs\DirectedDFS.cs" />
     <Compile Include="Graphs\EulerianPath.cs" />
     <Compile Include="Graphs\EulerianCycle.cs" />
