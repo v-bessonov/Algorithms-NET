@@ -61,9 +61,12 @@
     <Compile Include="Graphs\BipartiteX.cs" />
     <Compile Include="Graphs\BreadthFirstDirectedPaths.cs" />
     <Compile Include="Graphs\BreadthFirstPaths.cs" />
+    <Compile Include="Graphs\DepthFirstOrder.cs" />
     <Compile Include="Graphs\DirectedCycle.cs" />
     <Compile Include="Graphs\DirectedCycleX.cs" />
     <Compile Include="Graphs\DirectedDFS.cs" />
+    <Compile Include="Graphs\DirectedEulerianCycle.cs" />
+    <Compile Include="Graphs\DirectedEulerianPath.cs" />
     <Compile Include="Graphs\EulerianPath.cs" />
     <Compile Include="Graphs\EulerianCycle.cs" />
     <Compile Include="Graphs\Cycle.cs" />
@@ -152,6 +155,7 @@
     <Compile Include="Strings\Alphabet.cs" />
     <Compile Include="Strings\BoyerMoore.cs" />
     <Compile Include="Strings\KMP.cs" />
+    <Compile Include="Strings\NFA.cs" />
     <Compile Include="Strings\Quick3string.cs" />
     <Compile Include="Strings\MSD.cs" />
     <Compile Include="Strings\LSD.cs" />
