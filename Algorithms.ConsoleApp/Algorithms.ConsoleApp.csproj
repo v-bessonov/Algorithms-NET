@@ -65,6 +65,7 @@
     <Compile Include="Workers\Context\BTreeWorker.cs" />
     <Compile Include="Workers\Graphs\BipartiteXWorker.cs" />
     <Compile Include="Workers\Graphs\BreadthFirstPaths.cs" />
+    <Compile Include="Workers\Graphs\EdgeWeightedGraphWorker.cs" />
     <Compile Include="Workers\Graphs\DirectedEulerianPathWorker.cs" />
     <Compile Include="Workers\Graphs\DirectedEulerianCycleWorker.cs" />
     <Compile Include="Workers\Graphs\DirectedCycleXWorker.cs" />
@@ -145,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Files\Graphs\largeEWG.zip">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Files\Graphs\largeG.zip">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -197,6 +201,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Graphs\tinyDAG.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Graphs\mediumEWG.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Graphs\tinyEWG.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Graphs\tinyDG.txt">
