@@ -1,168 +1,188 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Algorithms.Core.Helpers;
 
 namespace Algorithms.Core.Graphs
 {
+    /// <summary>
+    /// The <tt>DepthFirstOrder</tt> class represents a data type for 
+    /// determining depth-first search ordering of the vertices in a digraph
+    /// or edge-weighted digraph, including preorder, postorder, and reverse postorder.
+    /// <p>
+    /// This implementation uses depth-first search.
+    /// The constructor takes time proportional to <em>V</em> + <em>E</em>
+    /// (in the worst case),
+    /// where <em>V</em> is the number of vertices and <em>E</em> is the number of edges.
+    /// Afterwards, the <em>preorder</em>, <em>postorder</em>, and <em>reverse postorder</em>
+    /// operation takes take time proportional to <em>V</em>.
+    /// </p>
+    /// </summary>
     public class DepthFirstOrder
     {
-        //private bool[] marked;          // marked[v] = has v been marked in dfs?
-        //private int[] pre;                 // pre[v]    = preorder  number of v
-        //private int[] post;                // post[v]   = postorder number of v
-        //private Collections.Queue<Integer> preorder;   // vertices in preorder
-        //private Collections.Queue<Integer> postorder;  // vertices in postorder
-        //private int preCounter;            // counter or preorder numbering
-        //private int postCounter;           // counter for postorder numbering
+        private readonly bool[] _marked;          // marked[v] = has v been marked in dfs?
+        private readonly int[] _pre;                 // pre[v]    = preorder  number of v
+        private readonly int[] _post;                // post[v]   = postorder number of v
+        private readonly Collections.Queue<Integer> _preorder;   // vertices in preorder
+        private readonly Collections.Queue<Integer> _postorder;  // vertices in postorder
+        private int _preCounter;            // counter or preorder numbering
+        private int _postCounter;           // counter for postorder numbering
 
-        ///**
-        // * Determines a depth-first order for the digraph <tt>G</tt>.
-        // * @param G the digraph
-        // */
-        //public DepthFirstOrder(Digraph G)
-        //{
-        //    pre = new int[G.V()];
-        //    post = new int[G.V()];
-        //    postorder = new Collections.Queue<Integer>();
-        //    preorder = new Collections.Queue<Integer>();
-        //    marked = new bool[G.V()];
-        //    for (int v = 0; v < G.V(); v++)
-        //        if (!marked[v]) dfs(G, v);
-        //}
+        /// <summary>
+        /// Determines a depth-first order for the digraph <tt>G</tt>.
+        /// </summary>
+        /// <param name="g">g the digraph</param>
+        public DepthFirstOrder(Digraph g)
+        {
+            _pre = new int[g.V];
+            _post = new int[g.V];
+            _postorder = new Collections.Queue<Integer>();
+            _preorder = new Collections.Queue<Integer>();
+            _marked = new bool[g.V];
+            for (var v = 0; v < g.V; v++)
+                if (!_marked[v]) Dfs(g, v);
+        }
 
-        ///**
-        // * Determines a depth-first order for the edge-weighted digraph <tt>G</tt>.
-        // * @param G the edge-weighted digraph
-        // */
-        //public DepthFirstOrder(EdgeWeightedDigraph G)
-        //{
-        //    pre = new int[G.V()];
-        //    post = new int[G.V()];
-        //    postorder = new Collections.Queue<Integer>();
-        //    preorder = new Collections.Queue<Integer>();
-        //    marked = new bool[G.V()];
-        //    for (int v = 0; v < G.V(); v++)
-        //        if (!marked[v]) dfs(G, v);
-        //}
+        /// <summary>
+        /// Determines a depth-first order for the edge-weighted digraph <tt>G</tt>.
+        /// </summary>
+        /// <param name="g">g the edge-weighted digraph</param>
+        public DepthFirstOrder(EdgeWeightedDigraph g)
+        {
+            _pre = new int[g.V];
+            _post = new int[g.V];
+            _postorder = new Collections.Queue<Integer>();
+            _preorder = new Collections.Queue<Integer>();
+            _marked = new bool[g.V];
+            for (var v = 0; v < g.V; v++)
+                if (!_marked[v]) Dfs(g, v);
+        }
 
-        //// run DFS in digraph G from vertex v and compute preorder/postorder
-        //private void dfs(Digraph G, int v)
-        //{
-        //    marked[v] = true;
-        //    pre[v] = preCounter++;
-        //    preorder.enCollections.Queue(v);
-        //    for (int w : G.adj(v))
-        //    {
-        //        if (!marked[w])
-        //        {
-        //            dfs(G, w);
-        //        }
-        //    }
-        //    postorder.enCollections.Queue(v);
-        //    post[v] = postCounter++;
-        //}
+        /// <summary>
+        /// run DFS in digraph G from vertex v and compute preorder/postorder
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="v"></param>
+        private void Dfs(Digraph g, int v)
+        {
+            _marked[v] = true;
+            _pre[v] = _preCounter++;
+            _preorder.Enqueue(v);
+            foreach (int w in g.Adj(v))
+            {
+                if (!_marked[w])
+                {
+                    Dfs(g, w);
+                }
+            }
+            _postorder.Enqueue(v);
+            _post[v] = _postCounter++;
+        }
 
-        //// run DFS in edge-weighted digraph G from vertex v and compute preorder/postorder
-        //private void dfs(EdgeWeightedDigraph G, int v)
-        //{
-        //    marked[v] = true;
-        //    pre[v] = preCounter++;
-        //    preorder.enCollections.Queue(v);
-        //    for (DirectedEdge e : G.adj(v))
-        //    {
-        //        int w = e.to();
-        //        if (!marked[w])
-        //        {
-        //            dfs(G, w);
-        //        }
-        //    }
-        //    postorder.enCollections.Queue(v);
-        //    post[v] = postCounter++;
-        //}
+        /// <summary>
+        /// run DFS in edge-weighted digraph G from vertex v and compute preorder/postorder
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="v"></param>
+        private void Dfs(EdgeWeightedDigraph g, int v)
+        {
+            _marked[v] = true;
+            _pre[v] = _preCounter++;
+            _preorder.Enqueue(v);
+            foreach (var e in g.Adj(v))
+            {
+                var w = e.To();
+                if (!_marked[w])
+                {
+                    Dfs(g, w);
+                }
+            }
+            _postorder.Enqueue(v);
+            _post[v] = _postCounter++;
+        }
 
-        ///**
-        // * Returns the preorder number of vertex <tt>v</tt>.
-        // * @param v the vertex
-        // * @return the preorder number of vertex <tt>v</tt>
-        // */
-        //public int pre(int v)
-        //{
-        //    return pre[v];
-        //}
+        /// <summary>
+        /// Returns the preorder number of vertex <tt>v</tt>.
+        /// </summary>
+        /// <param name="v">v the vertex</param>
+        /// <returns>the preorder number of vertex <tt>v</tt></returns>
+        public int Pre(int v)
+        {
+            return _pre[v];
+        }
 
-        ///**
-        // * Returns the postorder number of vertex <tt>v</tt>.
-        // * @param v the vertex
-        // * @return the postorder number of vertex <tt>v</tt>
-        // */
-        //public int post(int v)
-        //{
-        //    return post[v];
-        //}
+        /// <summary>
+        /// Returns the postorder number of vertex <tt>v</tt>.
+        /// </summary>
+        /// <param name="v">v the vertex</param>
+        /// <returns>the postorder number of vertex <tt>v</tt></returns>
+        public int Post(int v)
+        {
+            return _post[v];
+        }
 
-        ///**
-        // * Returns the vertices in postorder.
-        // * @return the vertices in postorder, as an iterable of vertices
-        // */
-        //public Iterable<Integer> post()
-        //{
-        //    return postorder;
-        //}
+        /// <summary>
+        /// Returns the vertices in postorder.
+        /// </summary>
+        /// <returns>the vertices in postorder, as an iterable of vertices</returns>
+        public IEnumerable<Integer> Post()
+        {
+            return _postorder;
+        }
 
-        ///**
-        // * Returns the vertices in preorder.
-        // * @return the vertices in preorder, as an iterable of vertices
-        // */
-        //public Iterable<Integer> pre()
-        //{
-        //    return preorder;
-        //}
+        /// <summary>
+        /// Returns the vertices in preorder.
+        /// </summary>
+        /// <returns>the vertices in preorder, as an iterable of vertices</returns>
+        public IEnumerable<Integer> Pre()
+        {
+            return _preorder;
+        }
 
-        ///**
-        // * Returns the vertices in reverse postorder.
-        // * @return the vertices in reverse postorder, as an iterable of vertices
-        // */
-        //public Iterable<Integer> reversePost()
-        //{
-        //    Stack<Integer> reverse = new Stack<Integer>();
-        //    for (int v : postorder)
-        //        reverse.push(v);
-        //    return reverse;
-        //}
-
-
-        //// check that pre() and post() are consistent with pre(v) and post(v)
-        //private bool check(Digraph G)
-        //{
-
-        //    // check that post(v) is consistent with post()
-        //    int r = 0;
-        //    for (int v : post())
-        //    {
-        //        if (post(v) != r)
-        //        {
-        //            StdOut.println("post(v) and post() inconsistent");
-        //            return false;
-        //        }
-        //        r++;
-        //    }
-
-        //    // check that pre(v) is consistent with pre()
-        //    r = 0;
-        //    for (int v : pre())
-        //    {
-        //        if (pre(v) != r)
-        //        {
-        //            StdOut.println("pre(v) and pre() inconsistent");
-        //            return false;
-        //        }
-        //        r++;
-        //    }
+        /// <summary>
+        /// Returns the vertices in reverse postorder.
+        /// </summary>
+        /// <returns>the vertices in reverse postorder, as an iterable of vertices</returns>
+        public IEnumerable<Integer> ReversePost()
+        {
+            var reverse = new Collections.Stack<Integer>();
+            foreach (int v in _postorder)
+                reverse.Push(v);
+            return reverse;
+        }
 
 
-        //    return true;
-        //}
+        /// <summary>
+        /// check that pre() and post() are consistent with pre(v) and post(v)
+        /// </summary>
+        /// <param name="g"></param>
+        /// <returns></returns>
+        public bool Check(Digraph g)
+        {
+
+            // check that post(v) is consistent with post()
+            var r = 0;
+            foreach (int v in Post())
+            {
+                if (Post(v) != r)
+                {
+                    Console.WriteLine("post(v) and post() inconsistent");
+                    return false;
+                }
+                r++;
+            }
+
+            // check that pre(v) is consistent with pre()
+            r = 0;
+            foreach (int v in Pre())
+            {
+                if (Pre(v) != r)
+                {
+                    Console.WriteLine("pre(v) and pre() inconsistent");
+                    return false;
+                }
+                r++;
+            }
+            return true;
+        }
     }
 }

@@ -65,8 +65,10 @@
     <Compile Include="Graphs\DirectedCycle.cs" />
     <Compile Include="Graphs\DirectedCycleX.cs" />
     <Compile Include="Graphs\DirectedDFS.cs" />
+    <Compile Include="Graphs\DirectedEdge.cs" />
     <Compile Include="Graphs\DirectedEulerianCycle.cs" />
     <Compile Include="Graphs\DirectedEulerianPath.cs" />
+    <Compile Include="Graphs\EdgeWeightedDigraph.cs" />
     <Compile Include="Graphs\EdgeWeightedGraph.cs" />
     <Compile Include="Graphs\EulerianPath.cs" />
     <Compile Include="Graphs\EulerianCycle.cs" />
