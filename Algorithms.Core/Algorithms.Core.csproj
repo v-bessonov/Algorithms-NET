@@ -69,6 +69,7 @@
     <Compile Include="Graphs\DirectedEulerianCycle.cs" />
     <Compile Include="Graphs\DirectedEulerianPath.cs" />
     <Compile Include="Graphs\EdgeWeightedDigraph.cs" />
+    <Compile Include="Graphs\EdgeWeightedDirectedCycle.cs" />
     <Compile Include="Graphs\EdgeWeightedGraph.cs" />
     <Compile Include="Graphs\EulerianPath.cs" />
     <Compile Include="Graphs\EulerianCycle.cs" />
@@ -88,7 +89,10 @@
     <Compile Include="Graphs\Graph.cs" />
     <Compile Include="Graphs\DegreesOfSeparation.cs" />
     <Compile Include="Graphs\NonrecursiveDirectedDFS.cs" />
+    <Compile Include="Graphs\SymbolDigraph.cs" />
     <Compile Include="Graphs\SymbolGraph.cs" />
+    <Compile Include="Graphs\TopologicalX.cs" />
+    <Compile Include="Graphs\Topological.cs" />
     <Compile Include="Helpers\Complex.cs" />
     <Compile Include="Helpers\DistanceToOrderComparer.cs" />
     <Compile Include="Helpers\Double.cs" />

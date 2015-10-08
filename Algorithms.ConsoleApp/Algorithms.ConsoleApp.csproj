@@ -74,10 +74,14 @@
     <Compile Include="Workers\Graphs\DirectedCycleWorker.cs" />
     <Compile Include="Workers\Graphs\DegreesOfSeparationWorker.cs" />
     <Compile Include="Workers\Graphs\BreadthFirstDirectedPathsWorker.cs" />
+    <Compile Include="Workers\Graphs\EdgeWeightedDirectedCycleWorker.cs" />
+    <Compile Include="Workers\Graphs\TopologicalXWorker.cs" />
+    <Compile Include="Workers\Graphs\TopologicalWorker.cs" />
     <Compile Include="Workers\Graphs\NonrecursiveDirectedDFSWorker.cs" />
     <Compile Include="Workers\Graphs\DirectedDFSWorker.cs" />
     <Compile Include="Workers\Graphs\DigraphWorker.cs" />
     <Compile Include="Workers\Graphs\DigraphGeneratorWorker.cs" />
+    <Compile Include="Workers\Graphs\SymbolDigraphWorker.cs" />
     <Compile Include="Workers\Graphs\SymbolGraphWorker.cs" />
     <Compile Include="Workers\Graphs\EulerianPathWorker.cs" />
     <Compile Include="Workers\Graphs\EulerianCycleWorker.cs" />
@@ -191,6 +195,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Graphs\mediumG.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Graphs\jobs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Graphs\tinyCG.txt">
