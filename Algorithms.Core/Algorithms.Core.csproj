@@ -79,6 +79,8 @@
     <Compile Include="Graphs\Bipartite.cs" />
     <Compile Include="Graphs\Digraph.cs" />
     <Compile Include="Graphs\DigraphGenerator.cs" />
+    <Compile Include="Graphs\GabowSCC.cs" />
+    <Compile Include="Graphs\KosarajuSharirSCC.cs" />
     <Compile Include="Graphs\NonrecursiveDFS.cs" />
     <Compile Include="Graphs\EdgeD.cs" />
     <Compile Include="Graphs\EdgeU.cs" />
@@ -89,10 +91,13 @@
     <Compile Include="Graphs\Graph.cs" />
     <Compile Include="Graphs\DegreesOfSeparation.cs" />
     <Compile Include="Graphs\NonrecursiveDirectedDFS.cs" />
+    <Compile Include="Graphs\PrimMST.cs" />
     <Compile Include="Graphs\SymbolDigraph.cs" />
     <Compile Include="Graphs\SymbolGraph.cs" />
+    <Compile Include="Graphs\TarjanSCC.cs" />
     <Compile Include="Graphs\TopologicalX.cs" />
     <Compile Include="Graphs\Topological.cs" />
+    <Compile Include="Graphs\TransitiveClosure.cs" />
     <Compile Include="Helpers\Complex.cs" />
     <Compile Include="Helpers\DistanceToOrderComparer.cs" />
     <Compile Include="Helpers\Double.cs" />
@@ -109,6 +114,7 @@
     <Compile Include="InOut\In.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuickUnionUF\QuickUnionUF.cs" />
+    <Compile Include="QuickUnionUF\UF.cs" />
     <Compile Include="QuickUnionUF\WeightedQuickUnionUF.cs" />
     <Compile Include="Searching\BinarySearchST.cs" />
     <Compile Include="Searching\BlackFilter.cs" />

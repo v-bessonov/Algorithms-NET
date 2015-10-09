@@ -16,7 +16,7 @@ namespace Algorithms.ConsoleApp.Workers.Graphs
             // create random DAG with V vertices and E edges; then add F random edges
             const int v = 50;
             const int e = 100;
-            const int f = 20;
+            const int f = 0;
             var g = DigraphGenerator.Dag(v, e);
 
             // add F extra edges

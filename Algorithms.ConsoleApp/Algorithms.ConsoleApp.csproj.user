@@ -4,6 +4,6 @@
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>-test TopologicalX</StartArguments>
+    <StartArguments>-test PrimMST</StartArguments>
   </PropertyGroup>
 </Project>

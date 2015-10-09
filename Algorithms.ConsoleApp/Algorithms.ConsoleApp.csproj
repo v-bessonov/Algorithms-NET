@@ -66,6 +66,11 @@
     <Compile Include="Workers\Graphs\BipartiteXWorker.cs" />
     <Compile Include="Workers\Graphs\BreadthFirstPaths.cs" />
     <Compile Include="Workers\Graphs\DepthFirstOrderWorker.cs" />
+    <Compile Include="Workers\Graphs\PrimMSTWorker.cs" />
+    <Compile Include="Workers\Graphs\GabowSCCWorker.cs" />
+    <Compile Include="Workers\Graphs\TarjanSCCWorker.cs" />
+    <Compile Include="Workers\Graphs\KosarajuSharirSCCWorker.cs" />
+    <Compile Include="Workers\Graphs\TransitiveClosureWorker.cs" />
     <Compile Include="Workers\Graphs\EdgeWeightedDigraphWorker.cs" />
     <Compile Include="Workers\Graphs\EdgeWeightedGraphWorker.cs" />
     <Compile Include="Workers\Graphs\DirectedEulerianPathWorker.cs" />
@@ -98,6 +103,7 @@
     <Compile Include="Workers\Helpers\NumericsWorker.cs" />
     <Compile Include="Workers\Helpers\VectorWorker.cs" />
     <Compile Include="Workers\InOut\BinaryOutWorker.cs" />
+    <Compile Include="Workers\QuickUnionUF\UFWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\WeightedQuickUnionUFWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\QuickUnionUFWorker.cs" />
     <Compile Include="Workers\QuickUnionUF\UnionUF.cs" />

@@ -79,7 +79,7 @@ namespace Algorithms.Core.Graphs
 
         public override string ToString()
         {
-            return $"{V}-{W} {Weight}";
+            return $"{V}-{W} {$"{Weight:0.00000}"}";
         }
     }
 }
