@@ -59,6 +59,7 @@
     <Compile Include="Context\Entry.cs" />
     <Compile Include="Context\Node.cs" />
     <Compile Include="Graphs\BipartiteX.cs" />
+    <Compile Include="Graphs\BoruvkaMST.cs" />
     <Compile Include="Graphs\BreadthFirstDirectedPaths.cs" />
     <Compile Include="Graphs\BreadthFirstPaths.cs" />
     <Compile Include="Graphs\DepthFirstOrder.cs" />
@@ -81,6 +82,8 @@
     <Compile Include="Graphs\DigraphGenerator.cs" />
     <Compile Include="Graphs\GabowSCC.cs" />
     <Compile Include="Graphs\KosarajuSharirSCC.cs" />
+    <Compile Include="Graphs\KruskalMST.cs" />
+    <Compile Include="Graphs\LazyPrimMST.cs" />
     <Compile Include="Graphs\NonrecursiveDFS.cs" />
     <Compile Include="Graphs\EdgeD.cs" />
     <Compile Include="Graphs\EdgeU.cs" />

@@ -66,6 +66,9 @@
     <Compile Include="Workers\Graphs\BipartiteXWorker.cs" />
     <Compile Include="Workers\Graphs\BreadthFirstPaths.cs" />
     <Compile Include="Workers\Graphs\DepthFirstOrderWorker.cs" />
+    <Compile Include="Workers\Graphs\BoruvkaMSTWorker.cs" />
+    <Compile Include="Workers\Graphs\LazyPrimMSTWorker.cs" />
+    <Compile Include="Workers\Graphs\KruskalMSTWorker.cs" />
     <Compile Include="Workers\Graphs\PrimMSTWorker.cs" />
     <Compile Include="Workers\Graphs\GabowSCCWorker.cs" />
     <Compile Include="Workers\Graphs\TarjanSCCWorker.cs" />
