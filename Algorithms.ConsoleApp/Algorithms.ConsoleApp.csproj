@@ -67,6 +67,8 @@
     <Compile Include="Workers\Graphs\BreadthFirstPaths.cs" />
     <Compile Include="Workers\Graphs\DepthFirstOrderWorker.cs" />
     <Compile Include="Workers\Graphs\BoruvkaMSTWorker.cs" />
+    <Compile Include="Workers\Graphs\DijkstraAllPairsSPWorker.cs" />
+    <Compile Include="Workers\Graphs\AcyclicSPWorker.cs" />
     <Compile Include="Workers\Graphs\LazyPrimMSTWorker.cs" />
     <Compile Include="Workers\Graphs\KruskalMSTWorker.cs" />
     <Compile Include="Workers\Graphs\DijkstraSPWorker.cs" />
@@ -221,6 +223,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Graphs\mediumDG.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Graphs\tinyEWDAG.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Graphs\tinyDAG.txt">

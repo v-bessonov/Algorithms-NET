@@ -4,6 +4,6 @@
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>-test DijkstraUndirectedSP</StartArguments>
+    <StartArguments>-test AcyclicSP</StartArguments>
   </PropertyGroup>
 </Project>
