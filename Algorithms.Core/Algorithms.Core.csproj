@@ -58,6 +58,7 @@
     <Compile Include="Context\BTree.cs" />
     <Compile Include="Context\Entry.cs" />
     <Compile Include="Context\Node.cs" />
+    <Compile Include="Graphs\AcyclicLP.cs" />
     <Compile Include="Graphs\AcyclicSP.cs" />
     <Compile Include="Graphs\BipartiteX.cs" />
     <Compile Include="Graphs\BoruvkaMST.cs" />
