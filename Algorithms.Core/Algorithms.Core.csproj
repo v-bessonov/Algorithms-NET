@@ -60,10 +60,12 @@
     <Compile Include="Context\Node.cs" />
     <Compile Include="Graphs\AcyclicLP.cs" />
     <Compile Include="Graphs\AcyclicSP.cs" />
+    <Compile Include="Graphs\BellmanFordSP.cs" />
     <Compile Include="Graphs\BipartiteX.cs" />
     <Compile Include="Graphs\BoruvkaMST.cs" />
     <Compile Include="Graphs\BreadthFirstDirectedPaths.cs" />
     <Compile Include="Graphs\BreadthFirstPaths.cs" />
+    <Compile Include="Graphs\CPM.cs" />
     <Compile Include="Graphs\DepthFirstOrder.cs" />
     <Compile Include="Graphs\DijkstraAllPairsSP.cs" />
     <Compile Include="Graphs\DijkstraSP.cs" />
