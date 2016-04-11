@@ -65,6 +65,7 @@
     <Compile Include="Graphs\BoruvkaMST.cs" />
     <Compile Include="Graphs\BreadthFirstDirectedPaths.cs" />
     <Compile Include="Graphs\BreadthFirstPaths.cs" />
+    <Compile Include="Graphs\Arbitrage.cs" />
     <Compile Include="Graphs\CPM.cs" />
     <Compile Include="Graphs\DepthFirstOrder.cs" />
     <Compile Include="Graphs\DijkstraAllPairsSP.cs" />

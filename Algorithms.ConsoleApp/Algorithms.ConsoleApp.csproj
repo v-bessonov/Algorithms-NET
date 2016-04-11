@@ -63,6 +63,7 @@
     <Compile Include="Workers\Collections\StackWorker.cs" />
     <Compile Include="Workers\Collections\BagWorker.cs" />
     <Compile Include="Workers\Context\BTreeWorker.cs" />
+    <Compile Include="Workers\Graphs\ArbitrageWorker.cs" />
     <Compile Include="Workers\Graphs\CPMWorker.cs" />
     <Compile Include="Workers\Graphs\AcyclicLPWorker.cs" />
     <Compile Include="Workers\Graphs\BipartiteXWorker.cs" />
@@ -205,6 +206,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Context\tinyBTree.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Graphs\rates.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Graphs\jobsPC.txt">
