@@ -60,6 +60,8 @@
     <Compile Include="Context\Node.cs" />
     <Compile Include="Graphs\AcyclicLP.cs" />
     <Compile Include="Graphs\AcyclicSP.cs" />
+    <Compile Include="Graphs\AdjEnumerator.cs" />
+    <Compile Include="Graphs\AdjMatrixEdgeWeightedDigraph.cs" />
     <Compile Include="Graphs\BellmanFordSP.cs" />
     <Compile Include="Graphs\BipartiteX.cs" />
     <Compile Include="Graphs\BoruvkaMST.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="Graphs\Bipartite.cs" />
     <Compile Include="Graphs\Digraph.cs" />
     <Compile Include="Graphs\DigraphGenerator.cs" />
+    <Compile Include="Graphs\FloydWarshall.cs" />
     <Compile Include="Graphs\GabowSCC.cs" />
     <Compile Include="Graphs\KosarajuSharirSCC.cs" />
     <Compile Include="Graphs\KruskalMST.cs" />
