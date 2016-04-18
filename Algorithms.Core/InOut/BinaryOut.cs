@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
 using System.Text;
 
 namespace Algorithms.Core.InOut
@@ -10,7 +9,24 @@ namespace Algorithms.Core.InOut
         //private BufferedOutputStream out;  // the output stream
         //private int buffer;                // 8-bit buffer of bits to write out
         //private int n;                     // number of bits remaining in buffer
-
+        private int _radix;
+        public int TotalBits { get; private set; } 
+        public BinaryOut()
+        {
+            TotalBits = 0;
+            _radix = 8;
+        }
+        public BinaryOut(int radix)
+        {
+            TotalBits = 0;
+            if (radix != 8 && radix != 16 && radix != 32 && radix != 64)
+                _radix = 8;
+            else _radix = radix;
+        }
+        public void ResetTotal()
+        {
+            TotalBits = 0;
+        }
 
         /**
           * Writes the 8-bit byte to the binary output stream.
@@ -44,14 +60,14 @@ namespace Algorithms.Core.InOut
         //    }
         //}
 
-        private static int Zfrs(int i, int j)
-        {
-            var maskIt = (i < 0);
-            i = i >> j;
-            if (maskIt)
-                i &= 0x7FFFFFFF;
-            return i;
-        }
+        //private static int Zfrs(int i, int j)
+        //{
+        //    var maskIt = (i < 0);
+        //    i = i >> j;
+        //    if (maskIt)
+        //        i &= 0x7FFFFFFF;
+        //    return i;
+        //}
 
         public void WriteBit(bool x)
         {
@@ -133,24 +149,24 @@ namespace Algorithms.Core.InOut
             Write(bytes);
         }
 
-        public void Write(char x, int r)
-        {
-            if (r == 16)
-            {
-                Write(x);
-                return;
-            }
-            if (r < 1 || r > 16) throw new ArgumentException("Illegal value for r = " + r);
-            //if (x >= (1 << r)) throw new ArgumentException("Illegal " + r + "-bit char = " + x);
-            var buffer = new StringBuilder();
-            for (var i = 0; i < r; i++)
-            {
-                var bit = ((Zfrs(x, (r - i - 1))) & 1) == 1;
-                buffer.Append(bit ? "1" : "0");
-                //WriteBit(bit);
-            }
-            Console.Write(Reverse(buffer.ToString()));
-        }
+        //public void Write(char x, int r)
+        //{
+        //    if (r == 16)
+        //    {
+        //        Write(x);
+        //        return;
+        //    }
+        //    if (r < 1 || r > 16) throw new ArgumentException("Illegal value for r = " + r);
+        //    //if (x >= (1 << r)) throw new ArgumentException("Illegal " + r + "-bit char = " + x);
+        //    var buffer = new StringBuilder();
+        //    for (var i = 0; i < r; i++)
+        //    {
+        //        var bit = ((Zfrs(x, (r - i - 1))) & 1) == 1;
+        //        buffer.Append(bit ? "1" : "0");
+        //        //WriteBit(bit);
+        //    }
+        //    Console.Write(Reverse(buffer.ToString()));
+        //}
 
 
         public void Write(string x)
@@ -165,12 +181,27 @@ namespace Algorithms.Core.InOut
 
         public void Write(byte[] bytes)
         {
-
             var sb = new StringBuilder();
+            var bitsIterator = 0;
             foreach (var b in bytes)
             {
                 //sb.Insert(0, Convert.ToString(b, 2).PadLeft(8, '0'));
-                sb.Append(Reverse(Convert.ToString(b, 2)).PadRight(8, '0'));
+                //sb.Append(Reverse(Convert.ToString(b, 2)).PadRight(8, '0'));
+                sb.AppendFormat(Convert.ToString(b, 2).PadLeft(8, '0'));
+                if (bitsIterator < _radix)
+                {
+                    
+                    bitsIterator += 8;
+                }
+                if (bitsIterator == _radix)
+                {
+
+                    bitsIterator = 0;
+                    sb.AppendFormat(Environment.NewLine);
+                }
+
+               
+                TotalBits += 8;
             }
             Console.Write(sb.ToString());
         }
