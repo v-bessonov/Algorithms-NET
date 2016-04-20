@@ -125,10 +125,8 @@ namespace Algorithms.Core.Strings
         /// <returns></returns>
         private static long LongRandomPrime()
         {
-            return 31;
-            //return Numerics.Prime();
-            //BigInteger prime = BigInteger.probablePrime(31, new Random());
-            //return prime.longValue();
+            return Numerics.GetPrime();
+            //return 31;
         }
     }
 }
