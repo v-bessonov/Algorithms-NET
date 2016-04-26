@@ -161,6 +161,7 @@
     <Compile Include="Workers\Helpers\DateWorker.cs" />
     <Compile Include="Workers\Strings\BoyerMooreWorker.cs" />
     <Compile Include="Workers\Strings\NFAWorker.cs" />
+    <Compile Include="Workers\Strings\TrieSTWorker.cs" />
     <Compile Include="Workers\Strings\RabinKarpWorker.cs" />
     <Compile Include="Workers\Strings\KMPWorker.cs" />
     <Compile Include="Workers\Strings\Quick3stringWorker.cs" />
@@ -271,6 +272,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\QuickUnionUF\tinyUF.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Strings\shellsST.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Strings\shells.txt">
