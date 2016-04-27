@@ -181,6 +181,7 @@
     <Compile Include="Strings\Count.cs" />
     <Compile Include="Strings\Alphabet.cs" />
     <Compile Include="Strings\BoyerMoore.cs" />
+    <Compile Include="Strings\GREP.cs" />
     <Compile Include="Strings\KMP.cs" />
     <Compile Include="Strings\NFA.cs" />
     <Compile Include="Strings\Node.cs" />
@@ -190,6 +191,7 @@
     <Compile Include="Strings\RabinKarp.cs" />
     <Compile Include="Strings\TrieSET.cs" />
     <Compile Include="Strings\TrieST.cs" />
+    <Compile Include="Strings\TST.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

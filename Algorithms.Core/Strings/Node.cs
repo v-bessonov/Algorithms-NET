@@ -11,7 +11,15 @@
 
         public bool IsString { get; set; }
 
+        public Node<TValue> Left { get; set; }
+        public Node<TValue> Mid { get; set; }
+        public Node<TValue> Right { get; set; }
+        // left, middle, and right subtries
 
+        public char Ch { get; set; }
+        public Node()
+        {
+        }
         public Node(int r)
         {
             Next = new Node<TValue>[r];
