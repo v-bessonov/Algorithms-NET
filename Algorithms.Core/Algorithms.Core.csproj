@@ -188,6 +188,7 @@
     <Compile Include="Strings\MSD.cs" />
     <Compile Include="Strings\LSD.cs" />
     <Compile Include="Strings\RabinKarp.cs" />
+    <Compile Include="Strings\TrieSET.cs" />
     <Compile Include="Strings\TrieST.cs" />
   </ItemGroup>
   <ItemGroup>

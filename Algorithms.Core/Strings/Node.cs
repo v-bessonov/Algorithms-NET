@@ -9,6 +9,9 @@
         public TValue Value { get; set; } // associated data
         public Node<TValue>[] Next { get; set; }
 
+        public bool IsString { get; set; }
+
+
         public Node(int r)
         {
             Next = new Node<TValue>[r];
