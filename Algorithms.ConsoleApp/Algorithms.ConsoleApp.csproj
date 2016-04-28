@@ -160,6 +160,7 @@
     <Compile Include="Workers\Helpers\TransactionWorker.cs" />
     <Compile Include="Workers\Helpers\DateWorker.cs" />
     <Compile Include="Workers\Strings\BoyerMooreWorker.cs" />
+    <Compile Include="Workers\Strings\BinaryDumpWorker.cs" />
     <Compile Include="Workers\Strings\NFAWorker.cs" />
     <Compile Include="Workers\Strings\TrieSETWorker.cs" />
     <Compile Include="Workers\Strings\GREPWorker.cs" />
