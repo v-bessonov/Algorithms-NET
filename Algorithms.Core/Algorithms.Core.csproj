@@ -182,6 +182,7 @@
     <Compile Include="Strings\Alphabet.cs" />
     <Compile Include="Strings\BoyerMoore.cs" />
     <Compile Include="Strings\BinaryDump.cs" />
+    <Compile Include="Strings\Genome.cs" />
     <Compile Include="Strings\GREP.cs" />
     <Compile Include="Strings\KMP.cs" />
     <Compile Include="Strings\NFA.cs" />

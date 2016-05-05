@@ -92,6 +92,8 @@ namespace Algorithms.Core.InOut
             Write(bytes);
         }
 
+
+
         /**
           * Writes the 32-bit int to the binary output stream.
           * @param x the <tt>int</tt> to write

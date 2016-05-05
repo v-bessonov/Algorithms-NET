@@ -159,6 +159,7 @@
     <Compile Include="Workers\StdLib\StdRandomWorker.cs" />
     <Compile Include="Workers\Helpers\TransactionWorker.cs" />
     <Compile Include="Workers\Helpers\DateWorker.cs" />
+    <Compile Include="Workers\Strings\GenomeWorker.cs" />
     <Compile Include="Workers\Strings\BoyerMooreWorker.cs" />
     <Compile Include="Workers\Strings\BinaryDumpWorker.cs" />
     <Compile Include="Workers\Strings\NFAWorker.cs" />
@@ -276,6 +277,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\QuickUnionUF\tinyUF.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Strings\genomeVirus.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Files\Strings\genomeTiny.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Files\Strings\shellsST.txt">
