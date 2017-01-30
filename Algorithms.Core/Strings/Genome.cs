@@ -15,6 +15,8 @@ namespace Algorithms.Core.Strings
     {
         private static readonly Alphabet DNA = new Alphabet("ACGT");
         private readonly BinaryOut _binaryOut;
+        private int _length ;
+        private List<byte> _bytes;
 
         public Genome()
         {
@@ -33,10 +35,12 @@ namespace Algorithms.Core.Strings
             //var n = genome.Length;
             //_binaryOut.Write(n);
             // Write two-bit code for char.
+            _length = genome.Length;
             var list = new List<byte>();
-            var bytes = ToByteList(list, genome);
+             _bytes = ToByteList(list, genome);
             _binaryOut.ResetTotal();
-            _binaryOut.Write(bytes.ToArray());
+            _binaryOut.Write(_bytes.ToArray());
+            Console.WriteLine();
             Console.WriteLine(_binaryOut.TotalBits);
 
             _binaryOut.ResetTotal();
@@ -50,13 +54,15 @@ namespace Algorithms.Core.Strings
         /// to an 8-bit extended ASCII character over the alphabet { A, C, T, G };
         /// and writes the results to standard output.
         /// </summary>
-        public void Expand(byte[] bytes)
+        public void Expand()
         {
             var sb = new StringBuilder();
-            foreach (var b in bytes)
+            var lengthIterator = 0;
+            foreach (var b in _bytes)
             {
                 var bits = new BitArray(new []{b});
                 var iterator = 0;
+                
                 var chBits = new BitArray(2);
                 foreach (var bit in bits)
                 {
@@ -67,6 +73,11 @@ namespace Algorithms.Core.Strings
                     chBits.CopyTo(b1, 0);
                     var ch = DNA.ToChar((int) b1[0]);
                     sb.Append(ch);
+                    lengthIterator++;
+                    if (lengthIterator >= _length)
+                    {
+                        break;
+                    }
                     iterator = 0;
                     chBits = new BitArray(2);
                 }
@@ -82,11 +93,11 @@ namespace Algorithms.Core.Strings
             var iteratorCh = 0;
             foreach (var ch in genome)
             {
-                if (ch == 'C')
-                {
-                    var tt = string.Empty;
-                    var tt1 = tt;
-                }
+                //if (ch == 'C')
+                //{
+                //    var tt = string.Empty;
+                //    var tt1 = tt;
+                //}
                 var bools = GetBoolArrayByIndex(DNA.ToIndex(ch));
                 if (bools == null) continue;
                 foreach (var bl in bools)

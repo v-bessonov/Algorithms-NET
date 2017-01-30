@@ -40,11 +40,7 @@ namespace Algorithms.ConsoleApp.Workers.Strings
             var content = @in.ReadAll();
             var genome = new Genome();
             genome.Compress(content);
-
-
-            var list = new List<byte>();
-            var bytes = genome.ToByteList(list, content);
-            genome.Expand(bytes.ToArray());
+            genome.Expand();
 
 
             Console.ReadLine();
