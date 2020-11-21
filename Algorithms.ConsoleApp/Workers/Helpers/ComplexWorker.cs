@@ -15,7 +15,9 @@ namespace Algorithms.ConsoleApp.Workers.Helpers
             var b = new Complex(-3.0, 4.0);
 
             Console.WriteLine("a            = " + a);
+            Console.WriteLine("a            = " + a.ToExponentials());
             Console.WriteLine("b            = " + b);
+            Console.WriteLine("b            = " + b.ToExponentials());
             Console.WriteLine("Re(a)        = " + a.Re());
             Console.WriteLine("Im(a)        = " + a.Im());
             Console.WriteLine("b + a        = " + b.Plus(a));

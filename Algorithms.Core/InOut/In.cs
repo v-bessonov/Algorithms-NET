@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.IO.Compression;
-using Ionic.Zip;
 
 namespace Algorithms.Core.InOut
 {
@@ -90,24 +89,18 @@ namespace Algorithms.Core.InOut
                 Console.Error.WriteLine("file name is empty");
                 throw new Exception();
             }
-            using (var archive = ZipFile.Read(_file))
+            using (var archive = ZipFile.OpenRead(_file))
             {
                 foreach (var entry in archive.Entries)
                 {
-                    if (entry.FileName.EndsWith(".csv", StringComparison.OrdinalIgnoreCase) || entry.FileName.EndsWith(".txt", StringComparison.OrdinalIgnoreCase))
+                    if (entry.Name.EndsWith(".csv", StringComparison.OrdinalIgnoreCase) || entry.Name.EndsWith(".txt", StringComparison.OrdinalIgnoreCase))
                     {
-                        using (var memoryStream = new MemoryStream())
-                        {
-                            entry.Extract(memoryStream);
-                            memoryStream.Position = 0;
-                            using (var reader = new StreamReader(memoryStream))
-                            {
-                                // Just read to the end.
-                                var text = reader.ReadToEnd();
-                                return text.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-                            }
-                        }
-                        
+
+                        using var reader = new StreamReader(entry.Open());
+                        // Just read to the end.
+                        var text = reader.ReadToEnd();
+                        return text.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+
                     }
                 }
             }

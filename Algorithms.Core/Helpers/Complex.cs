@@ -57,6 +57,11 @@ namespace Algorithms.Core.Helpers
             return Math.Atan2(_im, _re);
         }
 
+        public string ToExponentials()
+        {
+            return $"{Abs()}E^i{Phase()}";
+        }
+
         /// <summary>
         /// Returns the sum of this complex number and the specified complex number.
         /// </summary>
