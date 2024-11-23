@@ -62,5 +62,61 @@
             // Clear bit value and then set it up to required value.
             return (number & clearMask) | (uint)(bitValueNormalized << bitPosition);
         }
+
+        /// <summary>
+        /// This method determines if the number provided is even. 
+        /// It is based on the fact that odd numbers have their last right bit to be set to 1.
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        public static bool IsEven(int number)
+        {
+            return (number & 1) == 0;
+        }
+
+        /// <summary>
+        /// This method determines if the number is positive. 
+        /// It is based on the fact that all positive numbers have their leftmost bit to be set to 0. 
+        /// However, if the number provided is zero or negative zero, it should still return false.
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        public static bool IsPositive(int number)
+        {
+            // Zero is neither a positive nor a negative number.
+            if (number == 0)
+            {
+                return false;
+            }
+
+            // The most significant 32nd bit can be used to determine whether the number is positive.
+            return ((number >> 31) & 1) == 0;
+        }
+
+        /// <summary>
+        /// This method shifts original number by one bit to the left. 
+        /// Thus all binary number components (powers of two) are being multiplying by two 
+        /// and thus the number itself is being multiplied by two.
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        public static int MultiplyByTwo(int number)
+        {
+            return number << 1;
+        }
+
+        /// <summary>
+        /// This method shifts original number by one bit to the right. 
+        /// Thus all binary number components (powers of two) are being divided by two 
+        /// and thus the number itself is being divided by two without remainder.
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        public static int DivideByTwo(int number)
+        {
+            return number >> 1;
+        }
+
+        
     }
 }

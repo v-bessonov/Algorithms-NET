@@ -13,3 +13,4 @@
 /Algorithms.CoreNet/obj/Debug
 /Algorithms.Core/bin/Debug/net5.0
 /Algorithms.ConsoleApp/bin/Debug/net5.0
+.idea/*.*
